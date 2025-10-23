@@ -110,10 +110,16 @@ label {
   font-size: 1.25rem;
 }
 
-button {
+.nextButton {
   position: absolute;
   bottom: 20px;
   right: 20px;
+}
+
+.backButton {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 
 #social-links a {
