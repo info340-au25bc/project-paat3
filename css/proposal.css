@@ -94,15 +94,26 @@ h2.Title {
   border-radius: px;
 }
 
+.card {
+  position: relative;
+}
+
+.quiz-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  height: 400px;
+}
+
 label {
   margin-bottom: 20px;
   font-size: 1.25rem;
 }
 
 button {
-  position: relative;
-  top: 50px;
-  left: 750px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 #social-links a {
