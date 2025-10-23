@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Gift Finder Quiz Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/proposal.css">
+</head>
+
+<body >
+
+  <!-- nav bar -->
+
+  <!-- QUIZ HEADER -->
+  <header class="container-fluid text-white py-5">
+      <h1 style="font-size: 50px"> Gift Finder Quiz </h1>
+   </header>
+
+  <!-- MAIN PORTION -->
+  <div>
+    <h2 class="Title"> Let's Find the Perfect Gift! </h2>
+    <p class="quiz_description"> Fill out this quiz and our compass will lead you to the perfect gifts! </p>
+  </div>
+  
+  <!-- 1. progress bar -->
+  <div class="container">
+    <div class="progress-step">
+      <p>Step 1 of 7</p>
+      <div class="progress-bar">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 2. make a box in the middle -->
+  <main>
+    <!-- flex container, will center the stuff inside it -->
+    <div class="d-flex justify-content-center align-items-center">
+      <!-- make it a card, add margin-bottom -->
+      <div class="card w-50 mb-5" style="height: 450px">
+        <div class="card-body">
+          <h2 class="card-title ps-3 mt-3 mb-4">Who is the recipient to you?</h2>
+          <label class="ps-3">
+            <input type="radio" name="option" value="Friend">
+            Friend
+          </label> <br>
+          <label class="ps-3">
+            <input type="radio" name="option" value="Family Member">
+            Family Member
+          </label class="ps-3"> <br>
+          <label class="ps-3">
+            <input type="radio" name="option" value="Romantic Partner">
+            Romantic Partner
+          </label> <br>
+          <label class="ps-3">
+            <input type="radio" name="option" value="Colleague">
+            Colleague
+          </label> <br>
+          <label class="ps-3">
+            <input type="radio" name="option" value="Acquaintance">
+            Acquaintance
+          </label> <br>
+          <label class="ps-3">
+            <input type="radio" name="option" value="Other">
+            Other
+          </label>
+
+        <!-- add 'next' button -->
+         <button class="btn btn-dark " >Next</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div id="social-links">
+      <a href="https://www.instagram.com/accounts/login/"><i class="fa fa-instagram" aria-label="instagram"></i></a>
+      <a href="https://x.com/i/flow/login"><i class="fa fa-twitter-square" aria-label="twitter"></i></a>
+      <a href="https://www.facebook.com/login.php/"><i class="fa fa-facebook-square" aria-label="facebook"></i></a>
+      <a href="https://github.com/login"><i class="fa fa-github" aria-label="github"></i></a>
+    </div>
+
+    <div class="container">
+      <p><a href="mailto:email@coffee.uw.edu"><span class="material-icons">email: </span> giftCompass@uw.edu</a></p>
+      <p><a href="tel:555-123-4567"><span class="material-icons">phone: </span> 555-123-4567</a></p>
+      <p>&copy; A Gifter's Compass 2025</p>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

@@ -9,22 +9,34 @@ main {
 
   #hamburger-menu a{
     color: #000000;
+    width: 60px;
+    height: 60px;
   }
 
 nav {
     background-color: white;
+    height: 60px;
 }
 
 body {
     background-color: #EFF6FF;
+    height: 300px;
 }
   
-
 header {
     text-align: center;
-    background-image: url("../img/Christmas-Gifts-banner.jpg");
     background-size: cover;
+    background-image: url("../img/Christmas-Gifts-banner.jpg");
     background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* only applies to homepage */
+.home header {
+  height: 500px;
+}
+
+h1 {
+  margin-top: 50px;
 }
 
 img {
@@ -32,10 +44,45 @@ img {
     max-height: 100px; 
 }
 
+h2.Title {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 50px;
+}
+
+.quiz_description{
+  text-align: center;
+}
+
+.progress-step {
+  font-size: small;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  color: #9ed7e6;
+}
+
+.progress-bar{
+  width: 1300px;
+  height: 10px;
+  background-color: #9ed7e6;
+  border-radius: px;
+}
+
+label {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+button {
+  position: relative;
+  top: 50px;
+  left: 750px;
+}
+
 footer {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
-    padding: 2rem 1rem;
+    /* padding: 2rem 1rem; */
     text-align: center;
   }
   
