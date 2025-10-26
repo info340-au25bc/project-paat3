@@ -4,18 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Project Proposal Webpage</title>
+    <title>Sign Up - A Gifter's Compass</title>
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/MainPage.css">
-    <!-- favicon -->
     <link rel="icon" type="image/png" href="img/favicon-16x16.png">
 </head>
 
 <body background="img/abstract-white-minimalist-background-design-vector.jpg">
-    <!-- nav bar -->
     <nav>
         <div id="hamburger-menu">
             <a href="#">
@@ -37,68 +35,42 @@
         </div>
     </nav>
 
-    <!-- QUIZ HEADER -->
     <header class="container-fluid text-white py-5">
-        <h1 style="font-size: 50px"> Gift Finder Quiz </h1>
+        <h1 style="font-size: 50px">Create Account</h1>
     </header>
-
-    <!-- MAIN PORTION -->
-    <div>
-        <h2 class="Title"> Let's Find the Perfect Gift! </h2>
-        <p class="quiz-description"> Fill out this quiz and our compass will lead you to the perfect gifts! </p>
-    </div>
-
-    <!-- 1. progress bar -->
-    <div class="container">
-        <div class="progress-step">
-            <p>Step 4 4</p>
-            <div class="progress-bar">
-            </div>
-        </div>
-    </div>
 
     <main>
         <div class="d-flex justify-content-center align-items-center">
-            <!-- make it a card, add margin-bottom -->
-            <div class="card w-50 mb-5" style="height: 650px">
+            <div class="card w-50 mb-5" style="height: 575px">
                 <div class="card-body">
-                <h2 class="card-title ps-3 mt-3 mb-4">What's the Occassion?</h2>
-
-                    <div class="occassion-container" style="margin-top: 30px">
-                        <div class="occassion">Birthday</div>
-                        <div class="occassion">New Year</div>
-                        <div class="occassion">Christmas</div>
-                        <div class="occassion">Halloween</div>
-                        <div class="occassion">Thanksgiving</div>
-                        <div class="occassion">Father's Day</div>
-                        <div class="occassion">Mother's Day</div>
-                        <div class="occassion">Valentine's Day</div>
-                        <div class="occassion">Wedding/Aniversary</div>
-                        <div class="occassion">Engagement</div>
-                        <div class="occassion">Graduation</div>
-                        <div class="occassion">Retirement</div>
-                        <div class="occassion">Thank You</div>
-                        <div class="occassion">Just Because!</div>
-                        <div class="occassion">Other</div>
-                    </div>
-
-                    <div class="budget-container">
-                        <p class="min" style="margin-top: 100px; font-size:medium">$10</p>
-
-                        <div class="budget-bar"></div>
-                        <div class="budget-toggler"></div>
-
-                        <p class="max" style="margin-top: 100px; font-size:medium">$500+</p>
-
-                    </div>
-                    <p ><strong>Budget range:</strong></p>
-
+                    <h2 class="card-title text-center mt-3 mb-4">Join Us!</h2>
+                    
+                    
+                    <form class="p-3">
+                        <div class="mb-3">
+                            <label for="nameInput" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="nameInput">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="emailInput">
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordInput" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="passwordInput">
+                        </div>
+                         <div class="mb-3">
+                            <label for="confirmPasswordInput" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPasswordInput">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create account</button>
+                        <p class="text-center mt-3">
+                            Already have an account? <a href="login.html">Login</a>
+                        </p>
+                    </form>
                 </div>
-                <a href="browse.html" class="button">Next</a>
-                <a href="quiz_p3.html" class="buttonBack">Back</a>
             </div>
         </div>
-
     </main>
 
     <footer>
@@ -110,7 +82,6 @@
                     aria-label="facebook"></i></a>
             <a href="https://github.com/login"><i class="fa fa-github" aria-label="github"></i></a>
         </div>
-
         <div class="container">
             <p><a href="mailto:giftCompass@uw.edu"><span class="material-icons">email: </span> giftCompass@uw.edu</a>
             </p>
@@ -119,5 +90,4 @@
         </div>
     </footer>
 </body>
-
 </html>
