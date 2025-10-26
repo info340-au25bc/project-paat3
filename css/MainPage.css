@@ -6,10 +6,57 @@ html {
   height: 100%;
 }
 
+@media (min-width: 598px) {
+  #hamburger-menu {
+    /* display: none; */
+  }
+}
+
 nav {
   background-color: white;
-  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-family: "Cutive Mono", "Copperplate", sans-serif;
+}
+
+.nav-left {
+  display: flex;
+  margin-left: 25px;
+  gap: 1.5rem;
+}
+
+.nav-middle {
+  display: flex;
+  align-items: center;
+  margin-right: 85px;
+}
+
+.nav-right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+
+#hamburger-menu a {
+  color: #344E41;
+  font-size: 30px;
+}
+
+.home-button {
+  color: #344E41;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 3px;
+}
+
+.take-quiz-btn,
+.browse-button {
+  color: #344E41;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .searchBar {
@@ -18,48 +65,12 @@ nav {
 }
 
 .searchBar input {
-   width: 300px;               
-  padding: 10px 20px;       
-  border: 2px solid #d7d7d7; 
-  border-radius: 20px;        
-  font-size: 16px;            
+  width: 300px;
+  padding: 10px 20px;
+  border: 2px solid #d7d7d7;
+  border-radius: 20px;
+  font-size: 16px;
   outline: none;
-}
-
-#hamburger-menu a {
-  color: #344E41;
-  font-size: 30px;
-  margin-left: 20px;
-  position: relative;
-  top: 5px;
-}
-
-.home-button {
-  color: #344E41;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 25px;
-  position: relative;
-  left: 65px;
-  bottom: 35px;
-}
-
-.take-quiz-btn {
-  color: #344E41;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-  left: 1800px;
-  bottom: 65px;
-}
-
-.browse-button {
-  color: #344E41;
-  text-decoration: none;
-  font-weight: bold;
-  position: relative;
-  left: 1650px;
-  bottom: 89px;
 }
 
 body {
@@ -86,7 +97,7 @@ h1 {
 .card img {
   max-width: 150px;
   max-height: 150px;
-} 
+}
 
 h2 {
   text-align: center;
@@ -119,6 +130,35 @@ h2 {
   border-radius: 10px;
 }
 
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.quiz-container {
+  /* take up avail space in the center */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.quiz3-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+  padding-left: 170px;
+  max-height: 300px; 
+  align-content: center;
+}
+
+.quiz3-container label {
+  width: 45%; /* makes two columns */
+  margin-bottom: 5px;
+}
+
 .occassion-container {
   display: flex;
   flex-wrap: wrap;
@@ -135,16 +175,14 @@ h2 {
   font-size: x-large;
 }
 
-.budget-container {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .budget-bar {
-  width: 1000px;
+  width: 80%;
+  max-width: 1500px;
+  margin-top: 80px;
+  margin-left: 100px;
   height: 17px;
-  margin-top: 100px;
-  margin-left: 20px;
   background-color: #9ed7e6;
   border-radius: 10px;
 }
@@ -154,27 +192,33 @@ h2 {
   height: 20px;
   background-color: black;
   border-radius: 50%;
-  margin-top: 100px;
-  position: relative;
-  right: 500px;
-
-}
-.card {
-  position: relative;
+  margin-left: 200px;
 }
 
-.quiz-container {
+.budget-toggling {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: 400px;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
-label {
+.quiz1Button {
+  margin-left: 800px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 50px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
   margin-bottom: 20px;
-  font-size: 1.25rem;
 }
 
+.buttonBack,
 .button {
   background-color: #212529;
   color: #fff;
@@ -184,40 +228,21 @@ label {
   padding: 10px 24px;
   font-size: 18px;
   font-weight: 500;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
 }
 
-.buttonBack {
-  background-color: #212529;
-  color: #fff;
-  border: none;
-  text-decoration: none;
-  border-radius: 8px;
-  padding: 10px 24px;
-  font-size: 18px;
-  font-weight: 500;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+.FindGiftButton {
+  margin-left: 410px;
+  margin-bottom: 30px;
 }
-/* 
-.nextButton {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.backButton {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-} */
 
 #social-links a {
   color: #000000;
   font-size: 2.5rem;
+}
+
+label {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
 }
 
 footer {
@@ -307,6 +332,5 @@ img {
 .collection-text {
   font-size: small;
   margin-top: 20px;
-  position: relative;
   font-size: 15px;
 }

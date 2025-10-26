@@ -17,23 +17,20 @@
 <body background="img/abstract-white-minimalist-background-design-vector.jpg">
     <!-- nav bar -->
     <nav>
-        <div id="hamburger-menu">
-            <a href="#">
-                <i class="fa fa-bars" aria-label="menu"></i>
-            </a>
-        </div>
-        <div>
-            <a href="index.html" class="home-button">A Gifter's Compass</a>
-        </div>
-        <div>
-            <a href="quiz_p1.html" class="take-quiz-btn">Take Quiz</a>
-        </div>
-        <div>
-            <a href="browse.html" class="browse-button">Browse Gifts</a>
+        <div class="nav-left">
+            <div id="hamburger-menu">
+                <a href="#"><i class="fa fa-bars" aria-label="menu"></i></a>
+            </div> <a href="index.html" class="home-button">A Gifter's Compass</a>
         </div>
 
-        <div style="text-align: center; margin-top: -135px">
+        <div class="nav-middle">
             <img src="img/compass.jpg" alt="compass" width="60" height="60">
+        </div>
+
+
+        <div class="nav-right" style="margin-right: 30px">
+            <a href="browse.html" class="browse-button">Browse</a>
+            <a href="quiz_p1.html" class="take-quiz-btn">Take Quiz</a>
         </div>
     </nav>
 
@@ -61,74 +58,78 @@
         <!-- flex container, will center the stuff inside it -->
         <div class="d-flex justify-content-center align-items-center">
             <!-- make it a card, add margin-bottom -->
-            <div class="card w-50 mb-5" style="height: 550px">
-                <h2 class="card-title ps-3 mt-3 mb-4">How would you describe their personality?</h2>
-                <p style="padding-left: 20px;">Select all that apply</p>
+            <div class="card w-50 mb-5" style="height: 550px;">
+
+                <!--  -->
                 <div class="card-body">
-                    <div class="quiz-container">
+
+                    <!-- card title -->
+                    <h2 class="card-title ps-3 mt-3 mb-4">How would you describe their personality?</h2>
+                    <p style="padding-left: 20px;">Select all that apply:</p>
+
+                    <div class="quiz3-container">
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Adventurous">
                             Adventurous
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Practical">
                             Practical
-                        </label class="ps-3"> <br>
+                        </label class="ps-3">
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Sophisticated">
                             Sophisticated
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Humorous">
                             Humurous
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Organized">
                             Organized
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Intellectual">
                             Intellectual
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Laidback">
                             Laidback
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Minimalist">
                             Minimalist
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Creative">
                             Creative
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Sentimental">
                             Sentimental
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Trendy">
                             Trendy
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Introverted">
                             Introverted
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Extroverted">
                             Extroverted
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="checkbox" style="border-radius: 10px;" name="option" value="Health Conscious">
                             Health Conscious
-                        </label> <br>
-
+                        </label>
                     </div>
                 </div>
-                <a href="quiz_p4.html" class="button">Next</a>
-                <a href="quiz_p2.html" class="buttonBack">Back</a>
-                <!-- <button class="backButton btn btn-dark" style="font-size: 20px;">Back</button>
-                <button class="nextButton btn btn-dark" style="font-size: 20px;">Next</button> -->
+                <div class="buttonContainer">
+                    <a href="quiz_p2.html" class="buttonBack">Back</a>
+                    <a href="quiz_p4.html" class="button">Next</a>
+                </div>
             </div>
         </div>
 

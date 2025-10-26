@@ -17,23 +17,20 @@
 <body background="img/abstract-white-minimalist-background-design-vector.jpg">
     <!-- nav bar -->
     <nav>
-        <div id="hamburger-menu">
-            <a href="#">
-                <i class="fa fa-bars" aria-label="menu"></i>
-            </a>
-        </div>
-        <div>
-            <a href="index.html" class="home-button">A Gifter's Compass</a>
-        </div>
-        <div>
-            <a href="quiz_p1.html" class="take-quiz-btn">Take Quiz</a>
-        </div>
-        <div>
-            <a href="browse.html" class="browse-button">Browse Gifts</a>
+        <div class="nav-left">
+            <div id="hamburger-menu">
+                <a href="#"><i class="fa fa-bars" aria-label="menu"></i></a>
+            </div> <a href="index.html" class="home-button">A Gifter's Compass</a>
         </div>
 
-        <div style="text-align: center; margin-top: -135px">
+        <div class="nav-middle">
             <img src="img/compass.jpg" alt="compass" width="60" height="60">
+        </div>
+
+
+        <div class="nav-right" style="margin-right: 30px">
+            <a href="browse.html" class="browse-button">Browse</a>
+            <a href="quiz_p1.html" class="take-quiz-btn">Take Quiz</a>
         </div>
     </nav>
 
@@ -58,56 +55,58 @@
     </div>
 
     <main>
-        <!-- flex container, will center the stuff inside it -->
+        <!-- flex container that centers its single child, the card -->
         <div class="d-flex justify-content-center align-items-center">
-            <!-- make it a card, add margin-bottom -->
-            <div class="card w-50 mb-5" style="height: 550px">
+            <!-- makes a card, style w boostrap, adds margin-bottom -->
+            <div class="card w-50 mb-5">
+                <!-- hold the card's content -->
                 <div class="card-body">
                     <h2 class="card-title ps-3 mt-3 mb-4">What's their age range?</h2>
 
+                    <!-- start the specific flex items (options) -->
                     <div class="quiz-container">
                         <label class="ps-3">
                             <input type="radio" name="option" value="0-2 years (Infant)">
                             0-2 years (Infant/Toddler)
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
-                            <input type="radio" name="option" value="3-5 years (Preschoolers)">
+                            <input type="radio" name="option" value="3-5 years (Preschooler)">
                             3-5 years (Preschoolers)
-                        </label class="ps-3"> <br>
+                        </label class="ps-3">
                         <label class="ps-3">
                             <input type="radio" name="option" value="6-12 years (Child/Tween)">
                             6-12 years (Child)
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="radio" name="option" value="13-17 years (Young Teen)">
                             13-17 years
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="radio" name="option" value="18-24 years (Yount Adult)">
                             18-24 years (Yount Adult)
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="radio" name="option" value="25-34 years (Adult)">
                             25-34 years (Adult)
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="radio" name="option" value="35-49 years (Middle-Aged Adult)">
                             35-49 years (Middle-Aged Adult)
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="radio" name="option" value="50-64 years (Older Adult)">
                             50-64 years (Older Adult)
-                        </label> <br>
+                        </label>
                         <label class="ps-3">
                             <input type="radio" name="option" value="65+ (Senior)">
                             65+ (Senior)
                         </label>
                     </div>
                 </div>
-                <a href="quiz_p3.html" class="button">Next</a>
-                <a href="quiz_p1.html" class="buttonBack">Back</a>
-                <!-- <button class="backButton btn btn-dark" style="font-size: 20px;">Back</button>
-                <button class="nextButton btn btn-dark" style="font-size: 20px;">Next</button> -->
+                <div class="buttonContainer">
+                    <a href="quiz_p1.html" class="buttonBack">Back</a>
+                    <a href="quiz_p3.html" class="button">Next</a>
+                </div>
             </div>
         </div>
 
