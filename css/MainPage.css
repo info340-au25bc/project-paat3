@@ -68,20 +68,20 @@ nav {
   font-family: "Cutive Mono", "Copperplate", sans-serif;
 }
 
-.nav-left,
-.nav-right {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: flex-end;
+  .nav-left,
+  .nav-right {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+  }
 
-}
-
-.nav-middle {
-  display: flex;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .nav-middle {
+    display: flex;
+    align-items: center;
+    /* padding:  */
+    margin-left: 150px;
+    /* margin-right: auto; */
+  }
 
 #hamburger-menu a {
   color: #344E41;
@@ -97,7 +97,7 @@ nav {
 }
 
 .take-quiz-btn,
-.browse-button {
+.browse-button, .library-button{
   color: #344E41;
   text-decoration: none;
   font-weight: bold;
