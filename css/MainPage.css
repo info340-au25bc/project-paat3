@@ -6,11 +6,59 @@ html {
   height: 100%;
 }
 
-@media (min-width: 598px) {
+@media (max-width: 598px) {
   #hamburger-menu {
-    /* display: none; */
+    display: none;
+  }
+
+  header p {
+    display: none;
+  }
+
+  header .header-title {
+    font-size: 10px;
+  } 
+
+  header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  nav .home-button {
+    display: none;
+  }
+
+  div .Title, .quiz-description {
+    display: none;
+  }
+
+  .budgetToHide {
+    display: none;
+  }
+  
+  .budget-input-form  {
+    display: flex !important;
+    justify-content: center; 
+    padding-right: 10px;
+    padding-bottom: 50px;
   }
 }
+
+@media (min-width: 768px) {
+  nav {
+    font-size: 1.5rem;
+  }
+
+  header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+header .header-title {
+  font-size: 100px;
+}
+
 
 nav {
   background-color: white;
@@ -20,23 +68,20 @@ nav {
   font-family: "Cutive Mono", "Copperplate", sans-serif;
 }
 
-.nav-left {
+.nav-left,
+.nav-right {
   display: flex;
-  margin-left: 25px;
   gap: 1.5rem;
+  justify-content: flex-end;
+
 }
 
 .nav-middle {
   display: flex;
   align-items: center;
-  margin-right: 85px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.nav-right {
-  display: flex;
-  gap: 1.5rem;
-}
-
 
 #hamburger-menu a {
   color: #344E41;
@@ -125,7 +170,7 @@ h2 {
 }
 
 .progress-bar {
-  width: 1300px;
+  width: 100%;
   height: 10px;
   background-color: #9ed7e6;
   border-radius: 10px;
@@ -136,6 +181,7 @@ h2 {
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 30px;
+  height: 100%;
 }
 
 .quiz-container {
@@ -147,16 +193,21 @@ h2 {
 
 .quiz3-container {
   display: flex;
+  flex-grow: 1;
   flex-direction: row;
   flex-wrap: wrap;
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
   gap: 10px 30px;
-  padding-left: 170px;
-  max-height: 300px; 
+  max-height: 300px;
   align-content: center;
 }
 
 .quiz3-container label {
-  width: 45%; /* makes two columns */
+  width: 45%;
+  /* makes two columns */
   margin-bottom: 5px;
 }
 
@@ -175,8 +226,6 @@ h2 {
   width: 250px;
   font-size: x-large;
 }
-
-
 
 .budget-bar {
   width: 80%;
@@ -204,6 +253,11 @@ h2 {
   margin-bottom: 50px;
 }
 
+/* default is that this form does NOT show */
+.budget-input-form {
+  display: none;
+}
+
 .quiz1Button {
   margin-left: 800px;
   padding-left: 15px;
@@ -211,7 +265,7 @@ h2 {
   margin-bottom: 50px;
 }
 
-.buttonContainer {
+.quiz4Button {
   display: flex;
   justify-content: space-between;
   padding-left: 20px;
@@ -231,9 +285,18 @@ h2 {
   font-weight: 500;
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+
 .FindGiftButton {
-  margin-left: 410px;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 30px;
 }
 
 #social-links a {
