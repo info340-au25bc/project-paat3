@@ -125,7 +125,7 @@ h2 {
 }
 
 .progress-bar {
-  width: 1300px;
+  width: 100%;
   height: 10px;
   background-color: #9ed7e6;
   border-radius: 10px;
@@ -181,11 +181,16 @@ h2 {
 .budget-bar {
   width: 80%;
   max-width: 1500px;
-  margin-top: 80px;
-  margin-left: 100px;
   height: 17px;
   background-color: #9ed7e6;
   border-radius: 10px;
+}
+
+.budget-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
 }
 
 .budget-toggler {
@@ -193,7 +198,7 @@ h2 {
   height: 20px;
   background-color: black;
   border-radius: 50%;
-  margin-left: 200px;
+  margin-top: -19px;
 }
 
 .budget-toggling {
@@ -201,13 +206,6 @@ h2 {
   justify-content: space-between;
   gap: 10px;
   width: 100%;
-  margin-bottom: 50px;
-}
-
-.quiz1Button {
-  margin-left: 800px;
-  padding-left: 15px;
-  padding-right: 15px;
   margin-bottom: 50px;
 }
 
@@ -231,10 +229,7 @@ h2 {
   font-weight: 500;
 }
 
-.FindGiftButton {
-  margin-left: 410px;
-  margin-bottom: 30px;
-}
+
 
 #social-links a {
   color: #000000;
