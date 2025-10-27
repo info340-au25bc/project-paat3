@@ -230,11 +230,16 @@ h2 {
 .budget-bar {
   width: 80%;
   max-width: 1500px;
-  margin-top: 80px;
-  margin-left: 100px;
   height: 17px;
   background-color: #9ed7e6;
   border-radius: 10px;
+}
+
+.budget-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
 }
 
 .budget-toggler {
@@ -242,7 +247,7 @@ h2 {
   height: 20px;
   background-color: black;
   border-radius: 50%;
-  margin-left: 200px;
+  margin-top: -19px;
 }
 
 .budget-toggling {
@@ -251,11 +256,6 @@ h2 {
   gap: 10px;
   width: 100%;
   margin-bottom: 50px;
-}
-
-/* default is that this form does NOT show */
-.budget-input-form {
-  display: none;
 }
 
 .quiz1Button {
@@ -294,9 +294,8 @@ h2 {
 }
 
 .FindGiftButton {
-    display: flex;
-    justify-content: center; 
-    margin-bottom: 30px;
+  margin-left: 410px;
+  margin-bottom: 30px;
 }
 
 #social-links a {
