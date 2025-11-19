@@ -59,47 +59,48 @@
         <!-- flex container that centers its single child, the card -->
         <div class="d-flex justify-content-center align-items-center">
             <!-- makes a card, style w boostrap, adds margin-bottom -->
-            <div class="card w-50 mb-5">
+            <!-- WRAPPED IN FORM -->
+            <form class="card w-50 mb-5">
                 <!-- hold the card's content -->
                 <div class="card-body">
                     <h2 class="card-title ps-3 mt-3 mb-4">What's their age range?</h2>
 
                     <!-- start the specific flex items (options) -->
                     <div class="quiz-container">
-                        <label class="ps-3">
-                            <input type="radio" name="option" value="0-2 years (Infant)">
+                        <label class="ps-3" for="age-0-2">
+                            <input type="radio" name="option" value="0-2 years (Infant)" id="age-0-2">
                             0-2 years (Infant/Toddler)
                         </label>
-                        <label class="ps-3">
-                            <input type="radio" name="option" value="3-5 years (Preschooler)">
+                        <label class="ps-3" for="age-3-5">
+                            <input type="radio" name="option" value="3-5 years (Preschooler)" id="age-3-5">
                             3-5 years (Preschoolers)
-                        </label class="ps-3">
-                        <label class="ps-3">
-                            <input type="radio" name="option" value="6-12 years (Child/Tween)">
+                        </label>
+                        <label class="ps-3" for="age-6-12">
+                            <input type="radio" name="option" value="6-12 years (Child/Tween)" id="age-6-12">
                             6-12 years (Child)
                         </label>
-                        <label class="ps-3">
-                            <input type="radio" name="option" value="13-17 years (Young Teen)">
+                        <label class="ps-3" for="age-13-17">
+                            <input type="radio" name="option" value="13-17 years (Young Teen)" id="age-13-17">
                             13-17 years
                         </label>
-                        <label class="ps-3">
-                            <input type="radio" name="option" value="18-24 years (Yount Adult)">
+                        <label class="ps-3" for="age-18-24">
+                            <input type="radio" name="option" value="18-24 years (Yount Adult)" id="age-18-24">
                             18-24 years (Yount Adult)
                         </label>
-                        <label class="ps-3">
-                            <input type="radio" name="option" value="25-34 years (Adult)">
+                        <label class="ps-3" for="age-25-34">
+                            <input type="radio" name="option" value="25-34 years (Adult)" id="age-25-34">
                             25-34 years (Adult)
                         </label>
-                        <label class="ps-3">
-                            <input type="radio" name="option" value="35-49 years (Middle-Aged Adult)">
+                        <label class="ps-3" for="age-35-49">
+                            <input type="radio" name="option" value="35-49 years (Middle-Aged Adult)" id="age-35-49">
                             35-49 years (Middle-Aged Adult)
                         </label>
-                        <label class="ps-3">
-                            <input type="radio" name="option" value="50-64 years (Older Adult)">
+                        <label class="ps-3" for="age-50-64">
+                            <input type="radio" name="option" value="50-64 years (Older Adult)" id="age-50-64">
                             50-64 years (Older Adult)
                         </label>
-                        <label class="ps-3">
-                            <input type="radio" name="option" value="65+ (Senior)">
+                        <label class="ps-3" for="age-65plus">
+                            <input type="radio" name="option" value="65+ (Senior)" id="age-65plus">
                             65+ (Senior)
                         </label>
                     </div>
@@ -108,7 +109,7 @@
                     <a href="quiz_p1.html" class="buttonBack">Back</a>
                     <a href="quiz_p3.html" class="button">Next</a>
                 </div>
-            </div>
+            </form>
         </div>
 
     </main>
