@@ -1,4 +1,6 @@
 import React from 'react'; //import React Component
+import { useState } from 'react';
+
 import { Login } from './Login';
 import { Signup } from './Signup';
 import { Browse } from "./Browse";
@@ -12,6 +14,12 @@ import { Results } from './Results';
 import { Routes, Route } from 'react-router-dom';
 
 function App(props) {
+      const [savedGifts, setSavedGifts] = useState([]); //initial state is empty array
+
+      function savingGift(gift) {
+            setSavedGifts(already => [...already, gift]);
+      }
+
       return (
             <div>
                   <Routes>
@@ -20,12 +28,12 @@ function App(props) {
                         <Route path="*" element={<Index />} />
                         <Route path="index" element={<Index />} />
                         <Route path="browse" element={<Browse />} />
-                        <Route path="library" element={<Library />} />
+                        <Route path="library" element={<Library savedGifts={savedGifts} />} />
                         <Route path="quiz1" element={<Quiz1 />} />
                         <Route path="quiz2" element={<Quiz2 />} />
                         <Route path="quiz3" element={<Quiz3 />} />
                         <Route path="quiz4" element={<Quiz4 />} />
-                        <Route path="results" element={<Results />} />
+                        <Route path="results" element={<Results onSave={savingGift}/>} />
 
                   </Routes>
             </div>

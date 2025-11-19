@@ -16,7 +16,7 @@ export function Quiz2() {
           <img src="/img/compass.jpg" alt="compass" width="60" height="60" />
         </div>
 
-        <div className="nav-right" style={{ marginRight: "30px" }}>
+        <div className="nav-right">
           <Link to="/browse" className="browse-button">Browse</Link>
           <Link to="/quiz1" className="take-quiz-btn">Take Quiz</Link>
           <Link to="/library" className="library-button">Saved Gifts</Link>

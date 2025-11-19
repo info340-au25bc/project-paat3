@@ -5,8 +5,8 @@ export function Signup(props) {
     return (
         <div>
             <nav>
-                    <div className="nav-left"> </div>
-                    <div className="nav-middle">
+                    {/* <div className="nav-left"> </div> */}
+                    <div className="nav-login-signup">
                         <img src="img/compass.jpg" alt="compass" width="60" height="60" />
                         <Link to="/signup" className="home-button">A Gifter's Compass</Link>
                     </div>

@@ -17,7 +17,7 @@ html {
 
   header .header-title {
     font-size: 10px;
-  } 
+  }
 
   header {
     padding-top: 1rem;
@@ -28,17 +28,18 @@ html {
     display: none;
   }
 
-  div .Title, .quiz-description {
+  div .Title,
+  .quiz-description {
     display: none;
   }
 
   .budgetToHide {
     display: none;
   }
-  
-  .budget-input-form  {
+
+  .budget-input-form {
     display: flex !important;
-    justify-content: center; 
+    justify-content: center;
     padding-right: 10px;
     padding-bottom: 50px;
   }
@@ -59,28 +60,34 @@ header .header-title {
   font-size: 100px;
 }
 
-
 nav {
   background-color: white;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  /* new^^ */
   font-family: "Cutive Mono", "Copperplate", sans-serif;
 }
 
-  .nav-left,
-  .nav-right {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: flex-end;
-  }
+.nav-left,
+.nav-right {
+  display: flex;
+  flex: 1;
+  gap: 1.5rem;
+  align-items: center;
+}
 
-  .nav-middle {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
+.nav-right {
+  justify-content: flex-end;
+}
+
+.nav-login-signup {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 800px;
+}
 
 #hamburger-menu a {
   color: #344E41;
@@ -96,7 +103,8 @@ nav {
 }
 
 .take-quiz-btn,
-.browse-button, .library-button{
+.browse-button,
+.library-button {
   color: #344E41;
   text-decoration: none;
   font-weight: bold;
