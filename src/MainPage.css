@@ -1,0 +1,405 @@
+main {
+  margin-top: 3rem;
+}
+
+html {
+  height: 100%;
+}
+
+@media (max-width: 598px) {
+  #hamburger-menu {
+    display: none;
+  }
+
+  header p {
+    display: none;
+  }
+
+  header .header-title {
+    font-size: 10px;
+  } 
+
+  header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  nav .home-button {
+    display: none;
+  }
+
+  div .Title, .quiz-description {
+    display: none;
+  }
+
+  .budgetToHide {
+    display: none;
+  }
+  
+  .budget-input-form  {
+    display: flex !important;
+    justify-content: center; 
+    padding-right: 10px;
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    font-size: 1.5rem;
+  }
+
+  header {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+header .header-title {
+  font-size: 100px;
+}
+
+
+nav {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cutive Mono", "Copperplate", sans-serif;
+}
+
+  .nav-left,
+  .nav-right {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: flex-end;
+  }
+
+  .nav-middle {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+#hamburger-menu a {
+  color: #344E41;
+  font-size: 30px;
+}
+
+.home-button {
+  color: #344E41;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  margin-top: 3px;
+}
+
+.take-quiz-btn,
+.browse-button, .library-button{
+  color: #344E41;
+  text-decoration: none;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.searchBar {
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.searchBar input {
+  width: 300px;
+  padding: 10px 20px;
+  border: 2px solid #d7d7d7;
+  border-radius: 20px;
+  font-size: 16px;
+  outline: none;
+}
+
+body {
+  background-color: #EFF6FF;
+  height: 300px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+header {
+  text-align: center;
+  background-size: cover;
+  background-image: url("/img/Christmas-Gifts-banner.jpg");
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* only applies to homepage */
+.home header {
+  height: 500px;
+}
+
+h1 {
+  margin-top: 50px;
+}
+
+.home .card img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+h2 {
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 50px;
+}
+
+.quiz-description {
+  text-align: center;
+}
+
+.browse-description {
+  text-align: center;
+  height: 100%;
+  font-size: 16px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.progress-step {
+  font-size: small;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  color: #9ed7e6;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #9ed7e6;
+  border-radius: 10px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
+  height: 100%;
+}
+
+.quiz-container {
+  /* take up avail space in the center */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.quiz3-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  gap: 10px 30px;
+  max-height: 300px;
+  align-content: center;
+}
+
+.quiz3-container label {
+  width: 45%;
+  /* makes two columns */
+  margin-bottom: 5px;
+}
+
+.occassion-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.occassion {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 50px;
+  width: 250px;
+  font-size: x-large;
+}
+
+.budget-bar {
+  width: 100%;
+  max-width: 1500px;
+  height: 17px;
+  background-color: #9ed7e6;
+  border-radius: 10px;
+}
+
+.budget-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.barAndToggler {
+  padding-top: 60px;
+}
+
+.budget-toggler {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: -19px;
+}
+
+.budget-toggling {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.budget-input-form {
+  display: none;
+}
+
+.quiz1Button {
+  margin-left: 800px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 50px;
+}
+
+.quiz4Button {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+
+.buttonBack,
+.button {
+  background-color: #212529;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 10px;
+}
+
+.FindGiftButton {
+  display: flex;
+  justify-content: center;
+}
+
+#social-links a {
+  color: #000000;
+  font-size: 2.5rem;
+}
+
+label {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+
+footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  margin-top: 100px;
+}
+
+footer a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+p {
+  line-height: 1.5;
+}
+
+footer p:last-child {
+  margin-top: 1rem;
+}
+
+img {
+  max-height: 200px;
+  max-width: 200px;
+}
+
+/* browse page */
+.mainbox {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* i.e. Hobbies & Interests, Personality Types, etc. */
+.category {
+  padding: 16px;
+  margin-left: 230px;
+  margin-bottom: 100px;
+  border-radius: 10px;
+  border: 0.3px solid #ccc;
+  width: 600px;
+  height: 300px;
+  background: #f8f9fa;
+}
+
+/* i.e. Painting, Running, Reading, etc. */
+.wrap-choices {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* specify the box settings for each choice */
+.choices {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  height: 40px;
+}
+
+.popCollection {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.collection {
+  padding: 16px;
+  margin-top: 50px;
+  margin-left: 175px;
+  border-radius: 10px;
+  border: 0.3px solid #ccc;
+  width: 400px;
+  height: 150px;
+  background: #f8f9fa;
+  font-size: 20px;
+}
+
+.collection-text {
+  font-size: small;
+  margin-top: 20px;
+  font-size: 15px;
+}
