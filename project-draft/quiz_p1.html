@@ -65,32 +65,39 @@
       <!-- make it a card, add margin-bottom -->
       <div class="card w-50 mb-5">
         <!-- SELECTIONS -->
+        <!-- form element -->
+        <form class="card-body">
         <div class="card-body">
           <h2 class="card-title ps-3 mt-3 mb-4">Who is the recipient to you?</h2>
-          <label class="ps-3">
-            <input type="radio" name="option" value="Friend">
+          <label class="ps-3" for="opt-friend">
+            <input type="radio" name="option" value="Friend" id="opt-friend">
             Friend
           </label> <br>
-          <label class="ps-3">
-            <input type="radio" name="option" value="Family Member">
+          <label class="ps-3" for="opt-friend">
+            <input type="radio" name="option" value="Friend" id="opt-friend">
+            Friend
+          </label> <br>
+          <label class="ps-3" for="opt-family">
+            <input type="radio" name="option" value="Family Member" id="opt-family">
             Family Member
-          </label class="ps-3"> <br>
-          <label class="ps-3">
-            <input type="radio" name="option" value="Romantic Partner">
+          </label> <br>
+          <label class="ps-3" for="opt-partner">
+            <input type="radio" name="option" value="Romantic Partner" id="opt-partner">
             Romantic Partner
           </label> <br>
-          <label class="ps-3">
-            <input type="radio" name="option" value="Colleague">
+          <label class="ps-3" for="opt-colleague">
+            <input type="radio" name="option" value="Colleague" id="opt-colleague">
             Colleague
           </label> <br>
-          <label class="ps-3">
-            <input type="radio" name="option" value="Acquaintance">
+          <label class="ps-3" for="opt-acquaintance">
+            <input type="radio" name="option" value="Acquaintance" id="opt-acquaintance">
             Acquaintance
           </label> <br>
-          <label class="ps-3">
-            <input type="radio" name="option" value="Other">
+          <label class="ps-3" for="opt-other">
+            <input type="radio" name="option" value="Other" id="opt-other">
             Other
           </label>
+        </form>
         </div>
         <div class="buttonContainer" style="justify-content: flex-end;">
           <a href="quiz_p2.html" class="button">Next</a>

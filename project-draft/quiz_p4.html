@@ -58,27 +58,58 @@
     <main>
         <div class="d-flex justify-content-center align-items-center">
             <!-- make it a card, add margin-bottom -->
-            <div class="card w-50 mb-5">
+            <form class="card w-50 mb-5">
                 <!-- card title -->
                 <h2 class="card-title ps-3 mt-3 mb-4">What's the Occassion?</h2>
                 <div class="card-body">
                     <div class="quiz-container">
                         <div class="occassion-container" style="margin-top: 30px">
-                            <div class="occassion">Birthday</div>
-                            <div class="occassion">New Year</div>
-                            <div class="occassion">Christmas</div>
-                            <div class="occassion">Halloween</div>
-                            <div class="occassion">Thanksgiving</div>
-                            <div class="occassion">Father's Day</div>
-                            <div class="occassion">Mother's Day</div>
-                            <div class="occassion">Valentine's Day</div>
-                            <div class="occassion">Wedding/Aniversary</div>
-                            <div class="occassion">Engagement</div>
-                            <div class="occassion">Graduation</div>
-                            <div class="occassion">Retirement</div>
-                            <div class="occassion">Thank You</div>
-                            <div class="occassion">Just Because!</div>
-                            <div class="occassion">Other</div>
+                            <!-- Converted divs to labels with inputs inside -->
+                            <label class="occassion" for="occ-bday">
+                                <input type="radio" name="occasion" value="Birthday" id="occ-bday"> Birthday
+                            </label>
+                            <label class="occassion" for="occ-newyear">
+                                <input type="radio" name="occasion" value="New Year" id="occ-newyear"> New Year
+                            </label>
+                            <label class="occassion" for="occ-xmas">
+                                <input type="radio" name="occasion" value="Christmas" id="occ-xmas"> Christmas
+                            </label>
+                            <label class="occassion" for="occ-halloween">
+                                <input type="radio" name="occasion" value="Halloween" id="occ-halloween"> Halloween
+                            </label>
+                            <label class="occassion" for="occ-thanksgiving">
+                                <input type="radio" name="occasion" value="Thanksgiving" id="occ-thanksgiving"> Thanksgiving
+                            </label>
+                            <label class="occassion" for="occ-father">
+                                <input type="radio" name="occasion" value="Father's Day" id="occ-father"> Father's Day
+                            </label>
+                            <label class="occassion" for="occ-mother">
+                                <input type="radio" name="occasion" value="Mother's Day" id="occ-mother"> Mother's Day
+                            </label>
+                            <label class="occassion" for="occ-valentine">
+                                <input type="radio" name="occasion" value="Valentine's Day" id="occ-valentine"> Valentine's Day
+                            </label>
+                            <label class="occassion" for="occ-wedding">
+                                <input type="radio" name="occasion" value="Wedding/Aniversary" id="occ-wedding"> Wedding/Aniversary
+                            </label>
+                            <label class="occassion" for="occ-engage">
+                                <input type="radio" name="occasion" value="Engagement" id="occ-engage"> Engagement
+                            </label>
+                            <label class="occassion" for="occ-grad">
+                                <input type="radio" name="occasion" value="Graduation" id="occ-grad"> Graduation
+                            </label>
+                            <label class="occassion" for="occ-retire">
+                                <input type="radio" name="occasion" value="Retirement" id="occ-retire"> Retirement
+                            </label>
+                            <label class="occassion" for="occ-thank">
+                                <input type="radio" name="occasion" value="Thank You" id="occ-thank"> Thank You
+                            </label>
+                            <label class="occassion" for="occ-just">
+                                <input type="radio" name="occasion" value="Just Because!" id="occ-just"> Just Because!
+                            </label>
+                            <label class="occassion" for="occ-other">
+                                <input type="radio" name="occasion" value="Other" id="occ-other"> Other
+                            </label>
                         </div>
                     </div>
 
@@ -109,11 +140,12 @@
                     <div class="FindGiftButton">
                         <a href="results.html" class="button" style="font-size:30px">Find My Gifts!</a>
                     </div>
+                    
+                    <div class="quiz4Button">
+                        <a href="quiz_p3.html" class="buttonBack">Back</a>
+                    </div>
                 </div>
-                <div class="quiz4Button">
-                    <a href="quiz_p3.html" class="buttonBack">Back</a>
-                </div>
-            </div>
+            </form> 
         </div>
 
     </main>
