@@ -3,12 +3,12 @@ import React from "react";
 import { GiftCard } from './GiftCardComponent';
 import { Link } from "react-router-dom";
 
-export function Results({onSave}) {
+export function Results({savingGift}) {
     const giftList = [
         {
             id: 1,
             name: "Smart Mug",
-            img: "/img/mug.jpg",
+            img: "/public/img/mug.jpg",
             description: "Keeps coffee at the perfect temperature for hours.",
             price: 45,
             tags: "Practical, Tech-savvy",
@@ -17,7 +17,7 @@ export function Results({onSave}) {
         {
             id: 2,
             name: "Bluetooth Speaker",
-            img: "/img/radio.png",
+            img: "img/radio.png",
             description: "Waterproof speaker perfect for outdoor adventures.",
             price: 89,
             tags: "Outdoor, Music",
@@ -26,7 +26,7 @@ export function Results({onSave}) {
         {
             id: 3,
             name: "Smart Plant Garden",
-            img: "/img/garden.jpg",
+            img: "img/garden.jpg",
             description: "Indoor hydroponic garden with automatic watering.",
             price: 179,
             tags: "Eco-friendly, Home",
@@ -35,13 +35,13 @@ export function Results({onSave}) {
         {
             id: 4,
             name: "Headphones",
-            img: "/img/mug.jpg",
+            img: "img/OIP (1).webp",
             description: "High-quality audio with active noise cancellation.",
             price: 249,
             tags: "Tech, Travel",
         }
     ];
-    
+
     return (
         <div>
             <nav>
@@ -80,7 +80,7 @@ export function Results({onSave}) {
                     <div className="container">
                         <div className="row justify-content-center">
                             {giftList.map(gift => (
-                                <GiftCard key={gift.id} gift={gift} onSave={onSave} />
+                                <GiftCard key={gift.id} gift={gift} savingGift={savingGift} />
                             ))}
                         </div>
                     </div>

@@ -33,7 +33,7 @@ function App(props) {
                         <Route path="quiz2" element={<Quiz2 />} />
                         <Route path="quiz3" element={<Quiz3 />} />
                         <Route path="quiz4" element={<Quiz4 />} />
-                        <Route path="results" element={<Results onSave={savingGift}/>} />
+                        <Route path="results" element={<Results savingGift={savingGift}/>} />
 
                   </Routes>
             </div>

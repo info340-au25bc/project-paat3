@@ -4,12 +4,13 @@ import { GiftCard } from './GiftCardComponent';
 
 import { Link } from 'react-router';
 
+//savedGifts array
 export function Library({ savedGifts }) {
     const pageHasContent = () => {
         if (savedGifts.length == 0) {
             return <p style={{textAlign:"center"}}>No saved gifts yet!</p>
         } else {
-            return savedGifts.map(gift => <GiftCard key={gift.id} gift={gift} />);
+            return savedGifts.map(gift => <GiftCard key={gift.id} gift={gift}/>); //render a GiftCard component for each item in savedGifts array
         }
     }
 
