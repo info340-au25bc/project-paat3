@@ -35,7 +35,7 @@ export function Results({savingGift}) {
         {
             id: 4,
             name: "Headphones",
-            img: "img/OIP (1).webp",
+            img: "img/mug.jpg",
             description: "High-quality audio with active noise cancellation.",
             price: 249,
             tags: "Tech, Travel",
