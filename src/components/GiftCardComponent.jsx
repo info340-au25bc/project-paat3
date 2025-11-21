@@ -1,6 +1,9 @@
 import React from 'react';
 
-export function GiftCard({ gift, savingGift, isSaved }) {
+// gift = object
+//savingGiftToggle = function
+//isSaved = boolean
+export function GiftCard({ gift, savingGiftToggle, isSaved }) {
     return (
         <div className="col-12 col-md-6 col-xl-3 d-flex">
             <div className="card mb-4 w-100">
@@ -20,10 +23,13 @@ export function GiftCard({ gift, savingGift, isSaved }) {
 
                         {/* if item is saved then it will turn the button dark */}
                         <button
-                            className={`btn ${isSaved ? 'btn-dark' : 'btn-outline-dark'}`}
-                            onClick={() => onSave(gift)}
-                        >
-                            {isSaved ? "Saved" : "Save"}
+                            className={'btn ' + (isSaved ? 'btn-dark' : 'btn-outline-dark')}
+                            onClick={() => savingGiftToggle(gift)}> 
+                            {/* execute savingGiftToggle function when button is clicked */}
+                            {/* remember: savingGiftToggle function takes in a gift object, which is alrdy a prop for this GiftCard function */}
+                            
+                            {isSaved ? "Saved" : "Save"} 
+                            {/* change the display of the button */}
                         </button>
                     </div>
                 </div>

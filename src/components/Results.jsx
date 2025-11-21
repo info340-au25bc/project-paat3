@@ -3,7 +3,7 @@ import React from "react";
 import { GiftCard } from './GiftCardComponent';
 import { Link } from "react-router-dom";
 
-export function Results({ onSave, savedGifts }) {
+export function Results({ savedGifts, savingGiftToggle }) {
     const giftList = [
         {
             id: 1,
@@ -155,7 +155,7 @@ export function Results({ onSave, savedGifts }) {
                         {giftList.map(gift => {
                                 // check if this specific gift is already in the savedGifts array
                                 const isSaved = savedGifts.some(g => g.id === gift.id);
-                                return (<GiftCard key={gift.id} gift=   {gift} onSave={onSave} isSaved={isSaved}/>);
+                                return (<GiftCard key={gift.id} gift={gift} savingGiftToggle={savingGiftToggle} isSaved={isSaved}/>);
                             })}
                         </div>
                     </div>

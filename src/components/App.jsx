@@ -16,13 +16,16 @@ import { Routes, Route } from 'react-router-dom';
 function App(props) {
       const [savedGifts, setSavedGifts] = useState([]); //initial state is empty array
 
-      function savingGiftToggle(gift) {
-            setSavedGifts(currentSaved => {
-                  const isAlreadySaved = currentSaved.some(g => g.id === gift.id);
-                  if (isAlreadySaved) {
-                        return currentSaved.filter(g => g.id !== gift.id);
+      function savingGiftToggle(gift) { 
+            //look at the current savedGifts array
+            setSavedGifts(savedGifts => {
+                  //1. find if that current gift is already saved 
+                  const isAlreadySaved = savedGifts.some(currentGift => currentGift.id == gift.id); //check if the savedGifts array already has the gift in question
+
+                  if(isAlreadySaved) { //if the gift is already saved, remove it
+                        return savedGifts.filter(currentGift => currentGift.id !== gift.id); //go thru savedGifts array and filter for that gift, removing it
                   } else {
-                        return [...currentSaved, gift];
+                        return [...savedGifts, gift]; //else return the current array, with the added gift to save it
                   }
             });
       }
@@ -35,13 +38,12 @@ function App(props) {
                         <Route path="*" element={<Index />} />
                         <Route path="index" element={<Index />} />
                         <Route path="browse" element={<Browse />} />
-                        <Route path="library" element={<Library savedGifts={savedGifts} onSave={savingGiftToggle} />} />
+                        <Route path="library" element={<Library savedGifts={savedGifts} savingGiftToggle={savingGiftToggle} />} />
                         <Route path="quiz1" element={<Quiz1 />} />
                         <Route path="quiz2" element={<Quiz2 />} />
                         <Route path="quiz3" element={<Quiz3 />} />
                         <Route path="quiz4" element={<Quiz4 />} />
-                        <Route path="results" element={<Results onSave={savingGiftToggle} savedGifts={savedGifts} />} />
-
+                        <Route path="results" element={<Results savedGifts={savedGifts} savingGiftToggle={savingGiftToggle} />} />
                   </Routes>
             </div>
       );

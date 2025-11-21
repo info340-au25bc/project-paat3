@@ -1,19 +1,17 @@
 import React from 'react';
 import { GiftCard } from './GiftCardComponent';
-
-
 import { Link } from 'react-router';
 
-export function Library({ savedGifts, onSave }) {
+export function Library({ savedGifts, savingGiftToggle }) {
     const pageHasContent = () => {
         if (savedGifts.length == 0) {
             return <p style={{textAlign:"center"}}>No saved gifts yet!</p>
         } else {
-            return savedGifts.map(gift => <GiftCard key={gift.id} gift={gift} onSave={onSave} isSaved={true} />); // item always saved if appears here as true
+            return savedGifts.map(gift => <GiftCard key={gift.id} gift={gift} savingGiftToggle={savingGiftToggle} isSaved={true} />); // item always saved if appears here as true
         }
     }
 
-    return (
+   return (
         <div>
             <nav>
                 <div className="nav-left">
