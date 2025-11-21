@@ -16,8 +16,15 @@ import { Routes, Route } from 'react-router-dom';
 function App(props) {
       const [savedGifts, setSavedGifts] = useState([]); //initial state is empty array
 
-      function savingGift(gift) {
-            setSavedGifts(already => [...already, gift]);
+      function savingGiftToggle(gift) {
+            setSavedGifts(currentSaved => {
+                  const isAlreadySaved = currentSaved.some(g => g.id === gift.id);
+                  if (isAlreadySaved) {
+                        return currentSaved.filter(g => g.id !== gift.id);
+                  } else {
+                        return [...currentSaved, gift];
+                  }
+            });
       }
 
       return (
@@ -28,12 +35,12 @@ function App(props) {
                         <Route path="*" element={<Index />} />
                         <Route path="index" element={<Index />} />
                         <Route path="browse" element={<Browse />} />
-                        <Route path="library" element={<Library savedGifts={savedGifts} />} />
+                        <Route path="library" element={<Library savedGifts={savedGifts} onSave={savingGiftToggle} />} />
                         <Route path="quiz1" element={<Quiz1 />} />
                         <Route path="quiz2" element={<Quiz2 />} />
                         <Route path="quiz3" element={<Quiz3 />} />
                         <Route path="quiz4" element={<Quiz4 />} />
-                        <Route path="results" element={<Results savingGift={savingGift}/>} />
+                        <Route path="results" element={<Results onSave={savingGiftToggle} savedGifts={savedGifts} />} />
 
                   </Routes>
             </div>

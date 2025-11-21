@@ -20,8 +20,8 @@ export function GiftCard({ gift, onSave, isSaved }) {
 
                         {/* if item is saved then it will turn the button dark */}
                         <button
-                            className="btn btn-outline-dark"
-                            onClick={() => savingGift(gift)}
+                            className={`btn ${isSaved ? 'btn-dark' : 'btn-outline-dark'}`}
+                            onClick={() => onSave(gift)}
                         >
                             {isSaved ? "Saved" : "Save"}
                         </button>
