@@ -1,6 +1,6 @@
 import React from 'react';
 
-export function GiftCard({ gift, onSave, isSaved }) {
+export function GiftCard({ gift, savingGift, isSaved }) {
     return (
         <div className="col-12 col-md-6 col-xl-3 d-flex">
             <div className="card mb-4 w-100">
