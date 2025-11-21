@@ -3,7 +3,7 @@ import React from "react";
 import { GiftCard } from './GiftCardComponent';
 import { Link } from "react-router-dom";
 
-export function Results({savingGift}) {
+export function Results({ onSave, savedGifts }) {
     const giftList = [
         {
             id: 1,
@@ -39,7 +39,80 @@ export function Results({savingGift}) {
             description: "High-quality audio with active noise cancellation.",
             price: 249,
             tags: "Tech, Travel",
-        }
+        },
+
+        {
+            id: 5,
+            name: "Weighted Blanket",
+            img: "/img/weighted-blanket.jpg",
+            description: "A cozy, heavy blanket designed to reduce stress and improve sleep.",
+            price: 60,
+            tags: "Home, Wellness, Comfort",
+        },
+
+        {
+            id: 6,
+            name: "Portable Espresso Maker",
+            img: "/img/portable-coffee.jpg",
+            description: "Compact manual espresso maker for coffee lovers on the go.",
+            price: 55,
+            tags: "Coffee, Travel, Practical",
+        },
+
+        {
+            id: 7,
+            name: "Fitness Tracker Watch",
+            img: "/img/fitness-watch.jpg",
+            description: "Advanced fitness tracking with heart rate monitor.",
+            price: 199,
+            tags: "Fitness, Tech-savvy, Practical",
+        },
+
+        {
+            id: 8,
+            name: "Professional Camera Lens",
+            img: "/img/camera-lens.jpg",
+            description: "High-quality lens for photography enthusiasts.",
+            price: 399,
+            tags: "Photography, Creative, Tech-savvy",
+        },
+
+        {
+            id: 9,
+            name: "Board Game Collection",
+            img: "/img/board-game.jpg",
+            description: "Curated set of award-winning board games.",
+            price: 120,
+            tags: "Gaming, Social, Family-friendly",
+        },
+
+        {
+            id: 10,
+            name: "Hot Sauce Sampler Kit",
+            img: "/img/hot-sauce.jpg",
+            description: "A spicy collection of gourmet hot sauces ranging from mild to wild.",
+            price: 35,
+            tags: "Foodie, Adventurous",
+        },
+
+        {
+            id: 11,
+            name: "Leather Bound Journal",
+            img: "/img/journal.jpg",
+            description: "Premium leather notebook for writing, sketching, or planning.",
+            price: 25,
+            tags: "Creative, Sentimental, Intellectual",
+        },
+
+        {
+            id: 12,
+            name: "Instant Film Camera",
+            img: "/img/instant-film.jpg",
+            description: "Capture memories instantly with this retro-style camera that prints photos on the spot.",
+            price: 75,
+            tags: "Creative, Trendy, Social, Photography",
+        },
+
     ];
 
     return (
@@ -79,9 +152,11 @@ export function Results({savingGift}) {
                 <div className="container">
                     <div className="container">
                         <div className="row justify-content-center">
-                            {giftList.map(gift => (
-                                <GiftCard key={gift.id} gift={gift} savingGift={savingGift} />
-                            ))}
+                        {giftList.map(gift => {
+                                // check if this specific gift is already in the savedGifts array
+                                const isSaved = savedGifts.some(g => g.id === gift.id);
+                                return (<GiftCard key={gift.id} gift=   {gift} onSave={onSave} isSaved={isSaved}/>);
+                            })}
                         </div>
                     </div>
                 </div>
