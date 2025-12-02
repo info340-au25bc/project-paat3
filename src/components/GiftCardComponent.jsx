@@ -1,8 +1,7 @@
-import React from 'react';
-
 // gift = object
 //savingGiftToggle = function
 //isSaved = boolean
+
 export function GiftCard({ gift, savingGiftToggle, isSaved }) {
     return (
         <div className="col-12 col-md-6 col-xl-3 d-flex">

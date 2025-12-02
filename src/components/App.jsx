@@ -11,6 +11,8 @@ import { Quiz2 } from './Quiz2';
 import { Quiz3 } from './Quiz3';
 import { Quiz4 } from './Quiz4';
 import { Results } from './Results';
+import { BrowseResults } from './BrowseResults';
+
 import { Routes, Route } from 'react-router-dom';
 
 function App(props) {
@@ -44,6 +46,7 @@ function App(props) {
                         <Route path="quiz3" element={<Quiz3 />} />
                         <Route path="quiz4" element={<Quiz4 />} />
                         <Route path="results" element={<Results savedGifts={savedGifts} savingGiftToggle={savingGiftToggle} />} />
+                        <Route path="browseResults" element={<BrowseResults />} />
                   </Routes>
             </div>
       );
