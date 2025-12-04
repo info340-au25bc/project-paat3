@@ -6,6 +6,12 @@ html {
   height: 100%;
 }
 
+@media (max-width: 480px) {
+  .quiz3-container label {
+    width: 100%;
+  }
+}
+
 @media (max-width: 598px) {
   #hamburger-menu {
     display: none;
@@ -45,6 +51,29 @@ html {
   }
 }
 
+@media (max-width: 480px) {
+  .quiz3-container label {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .quiz-title {
+    font-size: 28px;
+  }
+
+  /* for browse: */
+  .mainbox {
+    grid-template-columns: 1fr;
+    /* 1 per row on tablets/mobile */
+  }
+
+  .category {
+    max-width: 90%;
+  }
+}
+
+
 @media (min-width: 768px) {
   nav {
     font-size: 1.5rem;
@@ -65,7 +94,6 @@ nav {
   display: flex;
   align-items: center;
   padding: 10px 20px;
-  /* new^^ */
   font-family: "Cutive Mono", "Copperplate", sans-serif;
 }
 
@@ -191,6 +219,15 @@ h2 {
   height: 100%;
 }
 
+.quiz-card {
+  width: 90%;
+  max-width: 600px;
+}
+
+.quiz-title {
+  font-size: 36px;
+}
+
 .quiz-container {
   /* take up avail space in the center */
   display: flex;
@@ -221,8 +258,8 @@ h2 {
 .occassion-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 10px;
+  justify-content: center;
 }
 
 .occassion {
@@ -230,7 +267,8 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 8px;
   height: 50px;
-  width: 250px;
+  width: 100%;
+  max-width: 250px;
   font-size: x-large;
 }
 
@@ -357,38 +395,48 @@ img {
 
 /* browse page */
 .mainbox {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: center;
+  /* display: flex;
+  flex-wrap: wrap; */
 }
 
 /* i.e. Hobbies & Interests, Personality Types, etc. */
 .category {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
   padding: 16px;
-  margin-left: 230px;
-  margin-bottom: 100px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  /* center each box ^ */
   border-radius: 10px;
   border: 0.3px solid #ccc;
-  width: 600px;
-  height: 300px;
   background: #f8f9fa;
+  box-sizing: border-box;
 }
 
+
 /* i.e. Painting, Running, Reading, etc. */
-.wrap-choices {
+/* .wrap-choices {
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
   gap: 10px;
-}
+} */
 
 /* specify the box settings for each choice */
-.choices {
+/* .choices {
   padding: 6px;
   border: 1px solid #ccc;
   border-radius: 8px;
   height: 40px;
-}
-
+} */
+/* 
 .popCollection {
   display: flex;
   flex-wrap: wrap;
@@ -410,4 +458,4 @@ img {
   font-size: small;
   margin-top: 20px;
   font-size: 15px;
-}
+} */

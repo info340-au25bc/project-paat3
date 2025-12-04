@@ -18,8 +18,6 @@ export function GiftCard({ gift, savingGiftToggle, isSaved }) {
                     </p>
 
                     <div className="mt-auto d-flex gap-2">
-                        <a href="#" className="btn btn-dark">Shop</a>
-
                         {/* if item is saved then it will turn the button dark */}
                         <button
                             className={'btn ' + (isSaved ? 'btn-dark' : 'btn-outline-dark')}

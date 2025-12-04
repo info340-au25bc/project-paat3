@@ -48,8 +48,13 @@ export function Browse(props) {
                     <Category title="Lifestyle" list={lifestyle} toggleFilter={toggleFilter} selectedFilters={selectedFilters} />
                 </div>
 
+</main>
 
-                <h2> Popular Collections </h2>
+           <Footer />
+        </div>
+    )
+}
+                {/* <h2> Popular Collections </h2>
                 <p className="browse-description">Take a look through some popular categories!</p>
                 <div className="popCollection">
                     <div className="collection">Trending Now
@@ -74,10 +79,5 @@ export function Browse(props) {
                         <p className="collection-text">Shop handmade goods and special items from independent and local artisans.
                         </p>
                     </div>
-                </div>
-            </main>
-
-           <Footer />
-        </div>
-    )
-}
+                </div> */}
+            

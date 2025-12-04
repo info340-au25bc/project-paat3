@@ -8,10 +8,6 @@ import { BrowserRouter} from 'react-router';
 
 import App from './components/App'
 
-
- 
-
-
 createRoot(document.getElementById('root')).render(
     <BrowserRouter>
     <App />
