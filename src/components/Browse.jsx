@@ -35,7 +35,7 @@ export function Browse(props) {
 
             <main>
                 {/* search button, easier to route to BrowseResults.jsx */}
-                <div className="searchButton" style={{ textAlign: "center" }}>
+                <div className="searchButton" style={{ textAlign: "center", marginBottom: "50px" }}>
                     <p>Choose some filters for your gift and then click 'Search!'</p>
                     <Link to="/browseResults" className="button">Search!</Link>
                 </div>
