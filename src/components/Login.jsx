@@ -18,7 +18,7 @@ export function Login(props) {
 
             <main>
                 <div className="d-flex justify-content-center align-items-center">
-                    <div className="card w-50 mb-5">
+                <div className="card col-12 col-md-6 mb-5">
                         <div className="card-body">
                             <h2 className="card-title text-center mt-3 mb-4">Welcome Back!</h2>
 

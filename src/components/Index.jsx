@@ -7,7 +7,7 @@ import { Footer } from './Footer';
 export function Index(props) {
     return (
         <div>
-            <div className="header">
+            <div className="home">
                 <NavBar />
 
                 <header className="container-fluid text-white py-5">
