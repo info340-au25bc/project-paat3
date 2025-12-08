@@ -5,105 +5,94 @@ export const gifts = [
         img: "/img/mug.jpg",
         description: "Keeps coffee at the perfect temperature for hours.",
         price: 45,
-        tags: "Practical, Tech-savvy",
+        tags: "Practical, Tech-savvy, Adult, Colleague, Friend, Birthday, Work Celebration, Practical",
     },
-
     {
         id: 2,
         name: "Bluetooth Speaker",
-        img: "img/radio.png",
+        img: "/img/radio.png",
         description: "Waterproof speaker perfect for outdoor adventures.",
         price: 89,
-        tags: "Outdoor, Music",
+        tags: "Outdoor, Music, Teen, Young Adult, Friend, Birthday, Graduation, Travel",
     },
-
     {
         id: 3,
         name: "Smart Plant Garden",
-        img: "img/garden.jpg",
+        img: "/img/garden.jpg",
         description: "Indoor hydroponic garden with automatic watering.",
         price: 179,
-        tags: "Eco-friendly, Home",
+        tags: "Eco-friendly, Home, Family, Mother's Day, House Warming, Adult, Senior",
     },
-
     {
         id: 4,
         name: "Headphones",
         img: "/img/OIP (1).webp",
         description: "High-quality audio with active noise cancellation.",
         price: 249,
-        tags: "Tech, Travel",
+        tags: "Tech, Travel, Teen, Young Adult, Partner, Christmas, Birthday",
     },
-
     {
         id: 5,
         name: "Weighted Blanket",
         img: "/img/weighted-blanket.jpg",
         description: "A cozy, heavy blanket designed to reduce stress and improve sleep.",
         price: 60,
-        tags: "Home, Wellness, Comfort",
+        tags: "Home, Wellness, Comfort, Introverted, Senior, Adult, Just Because, Christmas",
     },
-
     {
         id: 6,
         name: "Portable Espresso Maker",
         img: "/img/portable-coffee.jpg",
         description: "Compact manual espresso maker for coffee lovers on the go.",
         price: 55,
-        tags: "Coffee, Travel, Practical",
+        tags: "Coffee, Travel, Practical, Colleague, Adult, Father's Day, Birthday",
     },
-
     {
         id: 7,
         name: "Fitness Tracker Watch",
         img: "/img/fitness-watch.jpg",
         description: "Advanced fitness tracking with heart rate monitor.",
         price: 199,
-        tags: "Fitness, Tech-savvy, Practical",
+        tags: "Fitness, Tech-savvy, Practical, Health Conscious, Partner, New Year, Adult",
     },
-
     {
         id: 8,
         name: "Professional Camera Lens",
         img: "/img/camera-lens.jpg",
         description: "High-quality lens for photography enthusiasts.",
         price: 399,
-        tags: "Photography, Creative, Tech-savvy",
+        tags: "Photography, Creative, Tech-savvy, Partner, Anniversary, Wedding, Adult",
     },
-
     {
         id: 9,
         name: "Board Game Collection",
         img: "/img/board-game.jpg",
         description: "Curated set of award-winning board games.",
         price: 120,
-        tags: "Gaming, Social, Family-friendly",
+        tags: "Gaming, Social, Family-friendly, Family, Child, Teen, Christmas, Thanksgiving",
     },
-
     {
         id: 10,
         name: "Hot Sauce Sampler Kit",
         img: "/img/hot-sauce.jpg",
         description: "A spicy collection of gourmet hot sauces ranging from mild to wild.",
         price: 35,
-        tags: "Foodie, Adventurous",
+        tags: "Foodie, Adventurous, Friend, Colleague, Father's Day, Birthday, Adult",
     },
-
     {
         id: 11,
         name: "Leather Bound Journal",
         img: "/img/journal.jpg",
         description: "Premium leather notebook for writing, sketching, or planning.",
         price: 25,
-        tags: "Creative, Sentimental, Intellectual",
+        tags: "Creative, Sentimental, Intellectual, Student, Graduation, Friend, Adult",
     },
-
     {
         id: 12,
         name: "Instant Film Camera",
         img: "/img/instant-film.jpg",
         description: "Capture memories instantly with this retro-style camera that prints photos on the spot.",
         price: 75,
-        tags: "Creative, Trendy, Social, Photography",
+        tags: "Creative, Trendy, Social, Photography, Teen, Young Adult, Wedding, Birthday",
     }
-]
+];

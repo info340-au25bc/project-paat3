@@ -8,15 +8,38 @@ export function Results({ savedGifts, savingGiftToggle, quizFilters }) {
     const filteredGifts = allGifts.filter(gift => {
         // filter by budget
         if (gift.price > quizFilters.maxBudget) return false;
-        // 2. filter by personality (tags), if selected gift should match AT LEAST one
+        // filter by personality (tags), if selected gift should match AT LEAST one
         if (quizFilters.personality.length > 0) {
             // check if list of matching tags has more than 0 items
             const matchesPersonality = quizFilters.personality.filter(trait => 
-                gift.tags.includes(trait)
-            ).length > 0;
+                gift.tags.includes(trait)).length > 0;
             if (!matchesPersonality) return false;
         }
-        return true; // keep gift if passes checks
+        // if a recipient was chosen, check if the gift tags include that role
+        if (quizFilters.recipient) {
+            // split tags into an array to check individually
+            const giftTags = gift.tags.split(', ');
+            // check if ANY of the gift's tags match the recipient string
+            const matchesRecipient = giftTags.filter(tag => 
+                quizFilters.recipient.includes(tag)).length > 0;
+            // if we have a recipient filter but no match, remove gift
+            if (!matchesRecipient) return false;
+        }
+        // same thing but filter for occasion
+        if (quizFilters.occasion) {
+            const giftTags = gift.tags.split(', ');
+            const matchesOccasion = giftTags.filter(tag => 
+                quizFilters.occasion.includes(tag)).length > 0;
+            if (!matchesOccasion) return false;
+        }
+        // filter by age
+        if (quizFilters.age) {
+            const giftTags = gift.tags.split(', ');
+            const matchesAge = giftTags.filter(tag => 
+                quizFilters.age.includes(tag)).length > 0;
+            if (!matchesAge) return false;
+        }
+        return true; // Keep gift if it passes all checks
     });
 
     return (

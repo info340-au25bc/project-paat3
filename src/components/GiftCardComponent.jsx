@@ -2,13 +2,21 @@
 //savingGiftToggle = function
 //isSaved = boolean
 
+import { Link } from "react-router-dom";
+
 export function GiftCard({ gift, savingGiftToggle, isSaved }) {
     return (
         <div className="col-12 col-md-6 col-xl-3 d-flex">
             <div className="card mb-4 w-100">
+            {/* making image of the gift clickable */}
+            <Link to={`/gift/${gift.id}`}>
                 <img src={gift.img} className="card-img-top d-block mx-auto pt-3" alt={gift.name} />
+                </Link>
                 <div className="card-body d-flex flex-column">
-                    <h3 className="card-title">{gift.name}</h3>
+                    {/* making title of the gift clickable */}
+                <Link to={`/gift/${gift.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
+                        <h3 className="card-title">{gift.name}</h3>
+                    </Link>
                     <p className="card-text">{gift.description}</p>
                     <p className="card-text"><strong>Price:</strong> ${gift.price}</p>
                     <p className="card-text">

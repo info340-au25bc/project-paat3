@@ -12,6 +12,7 @@ import { Quiz3 } from './Quiz3';
 import { Quiz4 } from './Quiz4';
 import { Results } from './Results';
 import { BrowseResults } from './BrowseResults';
+import { GiftDetails } from './GiftDetails.jsx';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -64,6 +65,7 @@ function App(props) {
                         <Route path="results" element={<Results savedGifts={savedGifts} savingGiftToggle={savingGiftToggle} quizFilters={quizFilters} />} />
                         <Route path="browse" element={<Browse setGlobalFilters={setBrowseFilters} />} />
                         <Route path="browseResults" element={<BrowseResults filters={browseFilters} savedGifts={savedGifts} savingGiftToggle={savingGiftToggle}/>} />
+                        <Route path="gift/:id" element={<GiftDetails savedGifts={savedGifts} savingGiftToggle={savingGiftToggle} />} />
                   </Routes>
             </div>
       );

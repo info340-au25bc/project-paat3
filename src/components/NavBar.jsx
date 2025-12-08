@@ -13,7 +13,7 @@ export function NavBar (props) {
 
             <div className="nav-middle">
                 <Link to="/login">
-                    <img src="img/compass.jpg" alt="compass" width="60" height="60" />
+                    <img src="/img/compass.jpg" alt="compass" width="60" height="60" />
                 </Link>
             </div>
 
