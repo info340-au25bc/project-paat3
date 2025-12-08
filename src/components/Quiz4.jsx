@@ -94,40 +94,6 @@ export function Quiz4({ updateFilter, currentAnswers }) {
                 </div>
               </div>
 
-              <div className="AllBudgetComponents" style={{marginTop: "40px"}}>
-                <h3 className="text-center">What is your budget?</h3>
-                
-                {/* Visual slider placeholder */}
-                <div className="budgetToHide">
-                  <div className="barAndToggler">
-                    <div className="budget-bar"></div>
-                    <div className="budget-toggler" style={{marginLeft: "50%"}}></div>
-                  </div>
-                  <div className="budget-toggling">
-                    <p className="min" style={{ fontSize: "large", paddingLeft: "40px" }}>$10</p>
-                    <p className="max" style={{ fontSize: "large", paddingRight: "40px" }}>$500+</p>
-                  </div>
-                </div>
-
-                {/* Input Form */}
-                <div className="budget-input-form" style={{ display: "flex", justifyContent: "center", gap: "10px" }}>
-                  <input
-                    type="number"
-                    id="max-budget"
-                    placeholder="Enter Max Budget ($)"
-                    min="10"
-                    className="budget-input"
-                    value={tempBudget}
-                    onChange={handleBudgetChange}
-                    style={{ padding: "5px" }}
-                  />
-                  <button onClick={saveBudget} className="budget-submit-btn button" style={{fontSize: "16px"}}>
-                    Set
-                  </button>
-                </div>
-                <p className="text-center mt-2">Current Max Budget: <strong>${currentAnswers.maxBudget}</strong></p>
-              </div>
-
               <div className="FindGiftButton" style={{marginTop: "30px"}}>
                 <Link to="/results" className="button" style={{ fontSize: "30px" }}>Find My Gifts!</Link>
               </div>

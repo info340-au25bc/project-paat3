@@ -94,5 +94,21 @@ export const gifts = [
         description: "Capture memories instantly with this retro-style camera that prints photos on the spot.",
         price: 75,
         tags: "Creative, Trendy, Social, Photography, Teen, Young Adult, Wedding, Birthday",
+    },
+    {
+        id: 13,
+        name: "Hydration Pack",
+        img: "/img/water-bottle-backpack.webp",
+        description: "Lightweight hydration vest for long trail runs.",
+        price: 80,
+        tags: "Running, Fitness/Health, Adventurous, Outdoorsy",
+    },
+    {
+        id: 14,
+        name: "Modern Reading Lamp",
+        img: "",
+        description: "",
+        price: 60,
+        tags: ""
     }
 ];
