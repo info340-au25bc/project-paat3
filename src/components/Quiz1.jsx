@@ -2,14 +2,21 @@ import { Link } from "react-router-dom"; // use Link for SPA routing
 import { NavBar } from './NavBar';
 import { Footer } from "./Footer";
 
-export function Quiz1() {
+export function Quiz1({ updateFilter, currentAnswers }) {
+
+  // helper function so we dont have to make multiple individual versions of this
+  // turns click into action that we want (save the recipient we click)
+  const handleChange = (e) => {
+    updateFilter('recipient', e.target.value);
+  };
+
   return (
     <div>
-     <NavBar />
+      <NavBar />
 
       {/* QUIZ HEADER */}
       <header className="container-fluid text-white py-5">
-        <h1 className = "quiz-title">Gift Finder Quiz</h1>
+        <h1 className="quiz-title">Gift Finder Quiz</h1>
       </header>
 
       {/* MAIN PORTION */}
@@ -33,24 +40,23 @@ export function Quiz1() {
             <div className="card-body">
               <h2 className="card-title ps-3 mt-3 mb-4">Who is the recipient to you?</h2>
 
-              <label className="ps-3">
-                <input type="radio" name="option" value="Friend" /> Friend
-              </label><br />
-              <label className="ps-3">
-                <input type="radio" name="option" value="Family Member" /> Family Member
-              </label><br />
-              <label className="ps-3">
-                <input type="radio" name="option" value="Romantic Partner" /> Romantic Partner
-              </label><br />
-              <label className="ps-3">
-                <input type="radio" name="option" value="Colleague" /> Colleague
-              </label><br />
-              <label className="ps-3">
-                <input type="radio" name="option" value="Acquaintance" /> Acquaintance
-              </label><br />
-              <label className="ps-3">
-                <input type="radio" name="option" value="Other" /> Other
-              </label>
+              {/* map options and make it easier to make new categories if needed */}
+              {["Friend", "Family Member", "Romantic Partner", "Colleague", "Acquaintance", "Other"].map(role => (
+                <div key={role}>
+                  <label className="ps-3">
+                    <input
+                      type="radio"
+                      name="recipient"
+                      value={role}
+                      // check if saved
+                      checked={currentAnswers.recipient === role}
+                      // react to the click (actually save it)
+                      onChange={handleChange}
+                    /> {role}
+                  </label><br />
+                </div>
+              ))}
+
             </div>
 
             <div className="buttonContainer" style={{ justifyContent: "flex-end" }}>

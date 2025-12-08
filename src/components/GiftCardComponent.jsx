@@ -12,9 +12,7 @@ export function GiftCard({ gift, savingGiftToggle, isSaved }) {
                     <p className="card-text">{gift.description}</p>
                     <p className="card-text"><strong>Price:</strong> ${gift.price}</p>
                     <p className="card-text">
-                        <p>
                             <strong>Tags:</strong> {gift.tags}
-                        </p>
                     </p>
 
                     <div className="mt-auto d-flex gap-2">

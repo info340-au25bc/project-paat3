@@ -3,7 +3,20 @@ import { NavBar } from './NavBar';
 import { Footer } from "./Footer";
 
 
-export function Quiz3() {
+export function Quiz3({ updateFilter, currentAnswers }) {
+  const handleCheckboxChange = (event) => {
+    const value = event.target.value;
+    const isChecked = event.target.checked;
+    // copy current list of personalities
+    let updatedList = [...currentAnswers.personality];
+    if (isChecked) {
+      updatedList.push(value); // if checked then we add
+    } else {
+      updatedList = updatedList.filter(item => item !== value); // remove if unchecked
+    }
+    updateFilter('personality', updatedList); 
+  };
+
   return (
     <div>
       <NavBar />
@@ -38,62 +51,24 @@ export function Quiz3() {
               <p style={{ paddingLeft: "20px", marginBottom: "10px" }}>Select all that apply:</p>
 
               <div className="quiz3-container">
-                <label  style={{gap:"10px"}}>
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Adventurous" />
-                  Adventurous
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Practical" />
-                  Practical
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Sophisticated" />
-                  Sophisticated
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Humorous" />
-                  Humorous
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Organized" />
-                  Organized
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Intellectual" />
-                  Intellectual
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Laidback" />
-                  Laidback
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Minimalist" />
-                  Minimalist
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Creative" />
-                  Creative
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Sentimental" />
-                  Sentimental
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Trendy" />
-                  Trendy
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Introverted" />
-                  Introverted
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Extroverted" />
-                  Extroverted
-                </label>
-                <label >
-                  <input type="checkbox" style={{ borderRadius: "10px" }} name="option" value="Health Conscious" />
-                  Health Conscious
-                </label>
+                {/* map available options */}
+                {["Adventurous", "Practical", "Sophisticated", "Humorous", "Organized",
+                  "Intellectual", "Laidback", "Minimalist", "Creative", "Sentimental",
+                  "Trendy", "Introverted", "Extroverted", "Health Conscious"].map(trait => (
+                    <label key={trait} style={{ gap: "10px" }}>
+                      <input
+                        type="checkbox"
+                        style={{ borderRadius: "10px" }}
+                        value={trait}
+                        // checks if selected
+                        checked={currentAnswers.personality.includes(trait)}
+                        // attach handler
+                        onChange={handleCheckboxChange}
+                      />
+                      {trait}
+                    </label>
+
+                  ))}
               </div>
             </div>
 

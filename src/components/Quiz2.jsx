@@ -3,7 +3,19 @@ import { NavBar } from './NavBar';
 import { Footer } from "./Footer";
 
 
-export function Quiz2() {
+export function Quiz2({ updateFilter, currentAnswers }) {
+
+  const handleChange = (e) => {
+    updateFilter('age', e.target.value);
+  };
+
+  // list options to make dynamic list
+  const ageOptions = [
+      "0-2 years (Infant/Toddler)", "3-5 years (Preschooler)", "6-12 years (Child)",
+      "13-17 years (Teen)", "18-24 years (Young Adult)", "25-34 years (Adult)",
+      "35-49 years (Middle-Aged Adult)", "50-64 years (Older Adult)", "65+ (Senior)"
+  ];
+
   return (
     <div>
       <NavBar />
@@ -32,46 +44,25 @@ export function Quiz2() {
       {/* Quiz card */}
       <main>
         <div className="d-flex justify-content-center align-items-center">
-          <div className="card w-50 mb-5">
+        <div className="card col-12 col-md-6 mb-5">
             <div className="card-body">
               <h2 className="card-title ps-3 mt-3 mb-4">What's their age range?</h2>
 
               <div className="quiz-container">
-                <label className="ps-3">
-                  <input type="radio" name="option" value="0-2 years (Infant)" /> 0-2 years (Infant/Toddler)
-                </label>
-                <br />
-                <label className="ps-3">
-                  <input type="radio" name="option" value="3-5 years (Preschooler)" /> 3-5 years (Preschoolers)
-                </label>
-                <br />
-                <label className="ps-3">
-                  <input type="radio" name="option" value="6-12 years (Child/Tween)" /> 6-12 years (Child)
-                </label>
-                <br />
-                <label className="ps-3">
-                  <input type="radio" name="option" value="13-17 years (Young Teen)" /> 13-17 years
-                </label>
-                <br />
-                <label className="ps-3">
-                  <input type="radio" name="option" value="18-24 years (Young Adult)" /> 18-24 years (Young Adult)
-                </label>
-                <br />
-                <label className="ps-3">
-                  <input type="radio" name="option" value="25-34 years (Adult)" /> 25-34 years (Adult)
-                </label>
-                <br />
-                <label className="ps-3">
-                  <input type="radio" name="option" value="35-49 years (Middle-Aged Adult)" /> 35-49 years (Middle-Aged Adult)
-                </label>
-                <br />
-                <label className="ps-3">
-                  <input type="radio" name="option" value="50-64 years (Older Adult)" /> 50-64 years (Older Adult)
-                </label>
-                <br />
-                <label className="ps-3">
-                  <input type="radio" name="option" value="65+ (Senior)" /> 65+ (Senior)
-                </label>
+                {ageOptions.map(age => (
+                    <div key={age}>
+                        <label className="ps-3">
+                        <input 
+                            type="radio" 
+                            name="age" 
+                            value={age}
+                            checked={currentAnswers.age === age}
+                            onChange={handleChange}
+                        /> {age}
+                        </label>
+                        <br />
+                    </div>
+                ))}
               </div>
             </div>
 

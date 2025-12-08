@@ -6,11 +6,12 @@ import { Footer } from './Footer';
 import { useState } from 'react';
 
 
-export function Browse(props) {
+
+export function Browse({ setGlobalFilters }) {
 
     //start with initial empty array of filters chosen
     const [selectedFilters, setSelectedFilters] = useState([]);
-
+    
     function toggleFilter(filter) {
         if (selectedFilters.includes(filter)) {
             setSelectedFilters(selectedFilters.filter(f => f !== filter));
@@ -37,7 +38,10 @@ export function Browse(props) {
                 {/* search button, easier to route to BrowseResults.jsx */}
                 <div className="searchButton" style={{ textAlign: "center", marginBottom: "50px" }}>
                     <p>Choose some filters for your gift and then click 'Search!'</p>
-                    <Link to="/browseResults" className="button">Search!</Link>
+                    {/* pass selectedFilters to browseResults too */}
+                    <Link 
+                        to="/browseResults" className="button" onClick={() => setGlobalFilters(selectedFilters)}>Search!
+                    </Link>
                 </div>
 
                 {/* FILTERS SECTION */}

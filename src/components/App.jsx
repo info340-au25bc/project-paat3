@@ -18,6 +18,23 @@ import { Routes, Route } from 'react-router-dom';
 function App(props) {
       const [savedGifts, setSavedGifts] = useState([]); //initial state is empty array
 
+      const [browseFilters, setBrowseFilters] = useState([]); // initial state for browse filters
+
+      const [quizFilters, setQuizFilters] = useState({ 
+            recipient: "",
+            age: "",
+            personality: [], // array bc they can pick multiple
+            occasion: "",
+            maxBudget: 500   // high budget as default
+        });
+        // helper function to update specific quiz answer
+        function updateQuizFilter(category, value) {
+            setQuizFilters(prev => ({
+                ...prev,
+                [category]: value
+            }));
+        }
+
       function savingGiftToggle(gift) { 
             //look at the current savedGifts array
             setSavedGifts(savedGifts => {
@@ -39,14 +56,14 @@ function App(props) {
                         <Route path="signup" element={<Signup />} />
                         <Route path="*" element={<Index />} />
                         <Route path="index" element={<Index />} />
-                        <Route path="browse" element={<Browse />} />
                         <Route path="library" element={<Library savedGifts={savedGifts} savingGiftToggle={savingGiftToggle} />} />
-                        <Route path="quiz1" element={<Quiz1 />} />
-                        <Route path="quiz2" element={<Quiz2 />} />
-                        <Route path="quiz3" element={<Quiz3 />} />
-                        <Route path="quiz4" element={<Quiz4 />} />
-                        <Route path="results" element={<Results savedGifts={savedGifts} savingGiftToggle={savingGiftToggle} />} />
-                        <Route path="browseResults" element={<BrowseResults />} />
+                        <Route path="quiz1" element={<Quiz1 updateFilter={updateQuizFilter} currentAnswers={quizFilters} />} />
+                        <Route path="quiz2" element={<Quiz2 updateFilter={updateQuizFilter} currentAnswers={quizFilters} />} />
+                        <Route path="quiz3" element={<Quiz3 updateFilter={updateQuizFilter} currentAnswers={quizFilters} />} />
+                        <Route path="quiz4" element={<Quiz4 updateFilter={updateQuizFilter} currentAnswers={quizFilters} />} />
+                        <Route path="results" element={<Results savedGifts={savedGifts} savingGiftToggle={savingGiftToggle} quizFilters={quizFilters} />} />
+                        <Route path="browse" element={<Browse setGlobalFilters={setBrowseFilters} />} />
+                        <Route path="browseResults" element={<BrowseResults filters={browseFilters} savedGifts={savedGifts} savingGiftToggle={savingGiftToggle}/>} />
                   </Routes>
             </div>
       );

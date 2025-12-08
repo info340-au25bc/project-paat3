@@ -2,7 +2,7 @@ export const gifts = [
     {
         id: 1,
         name: "Smart Mug",
-        img: "/public/img/mug.jpg",
+        img: "/img/mug.jpg",
         description: "Keeps coffee at the perfect temperature for hours.",
         price: 45,
         tags: "Practical, Tech-savvy",
