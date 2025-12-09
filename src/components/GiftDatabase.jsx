@@ -133,7 +133,7 @@ export const gifts = [
         id: 17,
         name: "Embroidery Starter Kit",
         description: "Relaxing and creative embroidery gift.",
-        img: "embroidery-kit.jpg",
+        img: "/img/embroidery-kit.jpg",
         price: 80,
         tags: "Embroidery, Sentimental, Design, Homebody, Crafter/DIY'er, Retirement, Introverted, Emphathetic"
     },
@@ -141,7 +141,7 @@ export const gifts = [
         id: 18,
         name: "Mini Canvas",
         description: "A complete paint + canvas beginner set.",
-        img: "mini-canvas.jpg",
+        img: "/img/mini-canvas.jpg",
         price: 13,
         tags: "Painting, Design, Valentine's Day, Creative, Anniversary, Crafter/DIY'er, Practical, Introverted, Empathetic, Retirement"
     },
@@ -150,7 +150,7 @@ export const gifts = [
         id: 19,
         name: "Sturdy Skiing Helmet",
         description: "A sturdy, comfortable helmet for skiers of all skill levels.",
-        img: "skiing-helmet.jpg",
+        img: "/img/skiing-helmet.jpg",
         price: 60,
         tags: "Skiing, Sleek, Modern, Outdoorsy"
     },
@@ -159,7 +159,7 @@ export const gifts = [
         id: 20,
         name: "Day-Hike Backpack 30L",
         description: "Essential lightweight backpack.",
-        img: "hiking-backpack.jpg",
+        img: "/img/hiking-backpack.jpg",
         price: 55,
         tags: "Hiking, Outdoorsy, Adventurous, Fitness/Health"
     },
@@ -167,7 +167,7 @@ export const gifts = [
         id: 21,
         name: "Aesthetic Scrapbook",
         description: "Paper designs + stickers + tools.",
-        img: "scrapbooking-stickers.jpg",
+        img: "/img/scrapbooking-stickers.jpg",
         price: 20,
         tags: "Scrapbooking, Valentine's Day, Wedding, Journaling, Anniversary, Design, Creative, Introverted, Retirement"
     },
@@ -175,7 +175,7 @@ export const gifts = [
         id: 22,
         name: "World Globe for History Buffs",
         description: "Beautiful globe for memorizing the world.",
-        img: "globe.jpg",
+        img: "/img/globe.jpg",
         price: 35,
         tags: "History, Analytical"
     },
@@ -183,7 +183,7 @@ export const gifts = [
         id: 23,
         name: "Cooling, Refreshing Spots Towel",
         description: "Soft, refreshing towel to cool down.",
-        img: "sports-towel.jpg",
+        img: "/img/sports-towel.jpg",
         price: 12,
         tags: "Sports, Outdoorsy, Extroverted, Adventurous"
     },
@@ -191,7 +191,7 @@ export const gifts = [
         id: 24,
         name: "Scented Candle",
         description: "Calming home vibes.",
-        img: "candle.jpg",
+        img: "/img/candle.jpg",
         price: 15,
         tags: "Laidback, Introverted, Valentine's Day, Anniversary, Homebody, Minimalist, Sleek, Sentimental"
     },
@@ -199,7 +199,7 @@ export const gifts = [
         id: 25,
         name: "Eclectic, Colorful Rug",
         description: "Colorful rug for an eclectic household.",
-        img: "eclectic-rug.webp",
+        img: "/img/eclectic-rug.webp",
         price: 56,
         tags: "Electic, Homebody, House Warming, Vintage"
     },
@@ -207,7 +207,7 @@ export const gifts = [
         id: 26,
         name: "Record Player",
         description: "Cool record player for vinyl listening seshes.",
-        img: "record-player.avif",
+        img: "/img/record-player.avif",
         price: 78,
         tags: "Vintage, Trendy, Music Lover, House Warming, Sentimental, "
     },
@@ -215,7 +215,7 @@ export const gifts = [
         id: 27,
         name: "Humorous Frog Mug",
         description: "Funny frog coffee mug for anyone.",
-        img: "humorous-frog-mug.jpg",
+        img: "/img/humorous-frog-mug.jpg",
         price: 15,
         tags: "Humorous, Birthday, Valentine's Day, Christmas, House Warming, Eclectic " 
     },
@@ -223,7 +223,7 @@ export const gifts = [
         id: 28,
         name: "Hot Chocolate Variety Kit",
         description: "Warm and sweet hot chocolate-making kit",
-        img: "hot-choco-kit.avif",
+        img: "/img/hot-choco-kit.avif",
         price: 24,
         tags: "Christmas, Mother's Day, Halloween, Valentine's Day, Anniversary, Father's Day, Thanksgiving"
     },
@@ -231,7 +231,7 @@ export const gifts = [
         id: 29,
         name: "Paper Flowers",
         description: "Adorable paper flowers for your loved ones.",
-        img: "paper-flowers.jpg",
+        img: "/img/paper-flowers.jpg",
         price: 15,
         tags: "Valentine's Day, Graudation, Gardner/Plant Parent, Anniversary, Mother's Day, Design, Crafter/DIY'er"
     },
@@ -239,16 +239,16 @@ export const gifts = [
         id: 30,
         name: "Plush Baby Blanket",
         description: "Plush, safe baby blanekt.",
-        img: "baby-blanket.jpg",
+        img: "/img/baby-blanket.jpg",
         price: 30,
         tags: "Baby Shower"
     },
-
+    
     {
         id: 31,
         name: "Knife Set",
         description: "Diverse knife set for all kitchen needs.",
-        img: "knife-set.jpg",
+        img: "/img/knife-set.jpg",
         price: 60,
         tags: "Chef/Foodie"
     },
