@@ -8,19 +8,19 @@ export const hobbies = [
 
 export const personality = [
     "Introverted", "Extroverted", "Adventurous", "Laidback", "Creative",
-    "Eclectic", "Practical", "Minimalist", "Traditionalist", "Humorous",
+    "Eclectic", "Practical", "Minimalist", "Vintage", "Humorous",
     "Trendy", "Modern", "Sleek", "Sentimental", "Analytical", "Empathetic"
 ];
 
 export const occasions = [
-    "Birthday", "Christmas", "Valentine's Day", "Mother's Day", "Father's Day",
-    "Grandparents", "Anniversary", "Work Celebration", "Baby Shower",
+    "Birthday", "Christmas", "Valentine's Day", "Mother's Day", "Father's Day", 
+    "Anniversary", "Work Celebration", "Baby Shower",
     "Halloween", "Thanksgiving", "Graduation", "New Year's",
     "Wedding/Engagement", "House Warming", "Retirement"
 ];
 
 export const lifestyle = [
-    "Student", "Homebody", "Outdoorsy", "Gardner/Plant Parent", "Pet Owner",
+    "Student", "Homebody", "Outdoorsy", "Gardner/Plant Parent",
     "Chef/Foodie", "Music Lover", "Gamer", "Crafter/DIY'er",
     "Fitness/Health", "Sustainable/Eco-Friendly"
 ];

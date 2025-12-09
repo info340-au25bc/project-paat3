@@ -90,7 +90,6 @@ export function Quiz4({ updateFilter, currentAnswers }) {
                       </div>
                     );
                   })}
-                  
                 </div>
               </div>
 
