@@ -74,7 +74,7 @@ function App(props) {
       function savingGiftToggle(gift) { 
             // check if user is logged in first
             if (!currentUser) {
-                  toast.error("Please log in to save gifts!", { icon: '🔒' });
+                  toast.error("Please log in to save gifts!", { icon: '🔒' }, "(Click the Compass icon in the Navigation Bar!)");
                   return;}
 
             // find if that current gift is already saved 

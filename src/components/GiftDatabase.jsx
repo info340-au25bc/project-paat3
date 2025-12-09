@@ -252,7 +252,4 @@ export const gifts = [
         price: 60,
         tags: "Chef/Foodie"
     },
-
-
-
 ];

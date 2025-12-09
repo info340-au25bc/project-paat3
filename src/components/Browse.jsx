@@ -58,30 +58,4 @@ export function Browse({ setGlobalFilters }) {
         </div>
     )
 }
-                {/* <h2> Popular Collections </h2>
-                <p className="browse-description">Take a look through some popular categories!</p>
-                <div className="popCollection">
-                    <div className="collection">Trending Now
-                        <p className="collection-text">Shop the most popular and viral gifts gaining major buzz this season.</p>
-                    </div>
-                    <div className="collection">Gifts on a Budget
-                        <p className="collection-text">Explore our curated selection of gifts under a set price, perfect for smart
-                            shoppers.</p>
-                    </div>
-                    <div className="collection">Last Minute Gifts
-                        <p className="collection-text">Find quick, but thoughtul gifts that works for anyone, available with
-                            expedited delivery options!</p>
-                    </div>
-                    <div className="collection">Eco-Friendly Gifts
-                        <p className="collection-text">Discover sustainable, ethically made, and zero-waste items that are kind to
-                            the planet!</p>
-                    </div>
-                    <div className="collection">Splurge Worthy
-                        <p className="collection-text">Indulge them with premium gifts that are truly unforgettable.</p>
-                    </div>
-                    <div className="collection">Support Small
-                        <p className="collection-text">Shop handmade goods and special items from independent and local artisans.
-                        </p>
-                    </div>
-                </div> */}
-            
+              
