@@ -242,7 +242,7 @@ export const gifts = [
         img: "baby-blanket.jpg",
         price: 30,
         tags: "Baby Shower"
-    }
+    },
 
     {
         id: 31,
@@ -251,7 +251,7 @@ export const gifts = [
         img: "knife-set.jpg",
         price: 60,
         tags: "Chef/Foodie"
-    }
+    },
 
 
 
