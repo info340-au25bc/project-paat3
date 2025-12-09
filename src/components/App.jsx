@@ -1,5 +1,6 @@
 import React from 'react'; //import React Component
 import { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast'; //import third party react component
 
 import { Login } from './Login';
 import { Signup } from './Signup';
@@ -13,14 +14,11 @@ import { Quiz4 } from './Quiz4';
 import { Results } from './Results';
 import { BrowseResults } from './BrowseResults';
 import { GiftDetails } from './GiftDetails.jsx';
-
 import { Routes, Route } from 'react-router-dom';
 
 function App(props) {
       const [savedGifts, setSavedGifts] = useState([]); //initial state is empty array
-
       const [browseFilters, setBrowseFilters] = useState([]); // initial state for browse filters
-
       const [quizFilters, setQuizFilters] = useState({ 
             recipient: "",
             age: "",
@@ -40,10 +38,14 @@ function App(props) {
             setSavedGifts(savedGifts => {
                   //1. find if that current gift is already saved 
                   const isAlreadySaved = savedGifts.some(currentGift => currentGift.id == gift.id); //check if the savedGifts array already has the gift in question
-
                   if(isAlreadySaved) { //if the gift is already saved, remove it
+                        // trigger "removed" Toast
+                        toast.error("Removed from Library", {icon: '🗑️', style: {borderRadius: '10px', background: '#333', color: '#fff',},
+                          });
                         return savedGifts.filter(currentGift => currentGift.id !== gift.id); //go thru savedGifts array and filter for that gift, removing it
-                  } else {
+                        // trigger "saved" Toast
+                  } else { toast.success("Saved to Library!", {style: {borderRadius: '10px', background: '#333', color: '#fff',},
+                    });
                         return [...savedGifts, gift]; //else return the current array, with the added gift to save it
                   }
             });
@@ -51,6 +53,7 @@ function App(props) {
 
       return (
             <div>
+                  <Toaster position="top-center" reverseOrder={false} />
                   <Routes>
                         <Route path="login" element={<Login />} />
                         <Route path="signup" element={<Signup />} />
