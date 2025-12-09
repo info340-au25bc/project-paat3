@@ -26,7 +26,6 @@ function App(props) {
             age: "",
             personality: [], // array bc they can pick multiple
             occasion: "",
-            maxBudget: 500   // high budget as default
         });
         // helper function to update specific quiz answer
         function updateQuizFilter(category, value) {

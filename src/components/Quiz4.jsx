@@ -1,13 +1,11 @@
 import { Link } from "react-router-dom"; // use Link for SPA routing
 import { NavBar } from './NavBar';
 import { Footer } from "./Footer";
-import { useState } from "react";
 
 
 export function Quiz4({ updateFilter, currentAnswers }) {
   
   // local state for the budget input before they "set"
-  const [tempBudget, setTempBudget] = useState(currentAnswers.maxBudget || "");
   const occasionsList = [
     "Birthday", "New Year", "Christmas", "Halloween", "Thanksgiving",
     "Father's Day", "Mother's Day", "Valentine's Day", "Wedding/Anniversary",
@@ -23,17 +21,6 @@ export function Quiz4({ updateFilter, currentAnswers }) {
     }
   };
 
-  // set cost to whatever user inputs
-  const handleBudgetChange = (e) => {
-    setTempBudget(e.target.value);
-  };
-  // set budget to what user inputted and display it
-  const saveBudget = () => {
-    if (tempBudget) {
-      updateFilter('maxBudget', Number(tempBudget));
-      alert(`Budget set to $${tempBudget}`);
-    }
-  };
   return (
     <div>
       <NavBar />
