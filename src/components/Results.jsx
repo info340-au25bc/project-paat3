@@ -6,8 +6,6 @@ import { GiftCard } from './GiftCardComponent';
 
 export function Results({ savedGifts, savingGiftToggle, quizFilters }) {
     const filteredGifts = allGifts.filter(gift => {
-        // filter by budget
-        if (gift.price > quizFilters.maxBudget) return false;
         // filter by personality (tags), if selected gift should match AT LEAST one
         if (quizFilters.personality.length > 0) {
             // check if list of matching tags has more than 0 items
@@ -55,9 +53,8 @@ export function Results({ savedGifts, savingGiftToggle, quizFilters }) {
                     <h2 className="Title">Top Recommendations</h2>
                     {/* display quiz results dynamically */}
                     <p className="quiz-description">
-                    Based on your preferences: {quizFilters.recipient}, {quizFilters.occasion} (${quizFilters.maxBudget})</p>
+                    Based on your preferences: {quizFilters.recipient}, {quizFilters.occasion}</p>
                 </div>
-
                 {/* add in the GIFTLIST component */}
                 <div className="container">
                     <div className="container">
@@ -74,7 +71,7 @@ export function Results({ savedGifts, savingGiftToggle, quizFilters }) {
                             ) : ( // else then we display no gifts
                                 <div className="text-center mt-5">
                                     <h3>No gifts found!</h3>
-                                    <p>Try increasing your budget or selecting fewer personality traits.</p>
+                                    <p>Try selecting fewer personality traits.</p>
                                 </div>)}
                         </div>
                     </div>
